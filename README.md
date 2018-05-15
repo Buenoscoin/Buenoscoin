@@ -6,7 +6,7 @@ https://Buenascoin.io
 What is Buenas?
 ---------------------
 
-Buenas is a cryptocurrency for the Philippines
+Buenas is a cryptocurrency for Argentina
 
 License
 -------
@@ -17,7 +17,8 @@ information or see https://opensource.org/licenses/MIT.
 Credits
 -------
 
-Buenas was forked from Bitcoin Core, more specifically from Veggiecoin
+Buenas was forked from Bitcoin Core, more specifically from Manila
+
 * [bitcoin](https://github.com/bitcoin/bitcoin)
 * [CryptoCoderz](https://github.com/CryptoCoderz/Espers.git) HMQ1725
-* [Buenas](https://github.com/Oskii/Buenas)
+* [Manila](https://github.com/Oskii/Manila)
