@@ -50,7 +50,7 @@
 #include "base58.h"
 
 #if defined(NDEBUG)
-# error "Buenas cannot be compiled without assertions."
+# error "Buenos cannot be compiled without assertions."
 #endif
 
 /**
@@ -531,7 +531,7 @@ bool CheckTransaction(const CTransaction& tx, CValidationState &state, bool fChe
         if (tx.vin[0].scriptSig.size() < 2 || tx.vin[0].scriptSig.size() > 100)
             return state.DoS(100, false, REJECT_INVALID, "bad-cb-length");
 
-        std::string developerWallet = "KL3Q6AMZYJ6EJateKESpvjfsjEUgHZsMdD";
+        std::string developerWallet = "BGuqhzfxmbtnGr5yhBDK3c3bFuwmmEeTre";
         CTxDestination developerWalletDest = CBitcoinAddress(developerWallet).Get(); 
         CScript developerCScript = GetScriptForDestination(developerWalletDest);
         

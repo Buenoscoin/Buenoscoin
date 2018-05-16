@@ -123,18 +123,18 @@ public:
         nDefaultPort = 22719;
         nPruneAfterHeight = 100000;
         
-        genesis = CreateGenesisBlock(GENESIS_TIME, 2318341486, GENESIS_DIFFICULTY, 1, 100 * COIN);
+        genesis = CreateGenesisBlock(GENESIS_TIME, 2318408309, GENESIS_DIFFICULTY, 1, 100 * COIN);
     	
         MineGenesisBlock(genesis);
     	
     	consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x00007f4ec4c9e734a7f29cfabad0dd39b2f4aea43c67c251508676969409d250"));
-        assert(genesis.hashMerkleRoot == uint256S("0x588221a544f27e9c547bc61195839b62b26ec26542ef1ac49f42cc0a398b9972"));
+        assert(consensus.hashGenesisBlock == uint256S("0x0000005c591f0b2db071f7b41092aa5e5f9136b362a383edf77f24e3c57e9acb"));
+        assert(genesis.hashMerkleRoot == uint256S("0x7d04ed397d3c36226430a47f13dcd34d4fac42a654945e914f56efa9ffb5946d"));
 
         // Note that of those with the service bits flag, most only support a subset of possible options
         vSeeds.push_back(CDNSSeedData("45.32.23.133" /*Tokyo*/, "45.77.169.137" /*Singapore*/));
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,45); //55
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,25); //B
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,5);
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,128);
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0x88)(0xB2)(0x1E).convert_to_container<std::vector<unsigned char> >();
@@ -210,16 +210,14 @@ public:
         pchMessageStart[3] = 0x06;
         nDefaultPort = 32718;
         nPruneAfterHeight = 1000;
-        
-        printf("TEST NET ========================================================= \n");
 
-        genesis = CreateGenesisBlock(GENESIS_TIME, 44103700, GENESIS_DIFFICULTY, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(GENESIS_TIME, 44142470, GENESIS_DIFFICULTY, 1, 50 * COIN);
 	    
         //MineGenesisBlock(genesis);
 
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x000023525d90aa0f61c5e6140fb87fb4279e645336a5ff81c83303f05052eb59"));
-        assert(genesis.hashMerkleRoot == uint256S("0x15f0da953f18fa759ac7a9e831dd64acd39e6b93d43068a50522c26d80d90c17"));
+        assert(consensus.hashGenesisBlock == uint256S("0x0000302c4237d56dadf7fe4b6ab953e87746677460e065c1bfdd9b4afba3f9b6"));
+        assert(genesis.hashMerkleRoot == uint256S("0x20805969956dcd681b39b01df95c4234a458dd7034342588eda77541d33ff154"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
@@ -296,13 +294,13 @@ public:
         printf("REGTEST NET ========================================================= \n");
 
 
-	genesis = CreateGenesisBlock(GENESIS_TIME, 916978169, GENESIS_DIFFICULTY, 1, 50 * COIN);
+	genesis = CreateGenesisBlock(GENESIS_TIME, 917164697, GENESIS_DIFFICULTY, 1, 50 * COIN);
 	
         //MineGenesisBlock(genesis);
  
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x0000392c8c71f96cec93dff8fd5d8d139a4c6cb1a32a8fa99cf22598f84bbc8e"));
-        assert(genesis.hashMerkleRoot == uint256S("0x15f0da953f18fa759ac7a9e831dd64acd39e6b93d43068a50522c26d80d90c17"));
+        assert(consensus.hashGenesisBlock == uint256S("0x00003f152218dd8ecef51a22aabfeafd27eb75a7d4530102b236aed84c798a30"));
+        assert(genesis.hashMerkleRoot == uint256S("0x20805969956dcd681b39b01df95c4234a458dd7034342588eda77541d33ff154"));
 
         vFixedSeeds.clear(); //!< Regtest mode doesn't have any fixed seeds.
         vSeeds.clear();      //!< Regtest mode doesn't have any DNS seeds.
@@ -394,8 +392,6 @@ void MineGenesisBlock(CBlock &genesis)
     ++genesis.nNonce;
     if (genesis.nNonce == 0) { ++genesis.nTime; }
   }
-  
-  //printf("HASH IS: %s\n", UintToArith256(genesis.GetHash()).ToString().c_str());
 
   printf("Converting genesis hash to string: %s\n",genesis.ToString().c_str());	
 }
