@@ -75,10 +75,10 @@ am__make_running_with_option = \
   test $$has_opt = yes
 am__make_dryrun = (target_option=n; $(am__make_running_with_option))
 am__make_keepgoing = (target_option=k; $(am__make_running_with_option))
-pkgdatadir = $(datadir)/Buenas
-pkgincludedir = $(includedir)/Buenas
-pkglibdir = $(libdir)/Buenas
-pkglibexecdir = $(libexecdir)/Buenas
+pkgdatadir = $(datadir)/Buenos
+pkgincludedir = $(includedir)/Buenos
+pkglibdir = $(libdir)/Buenos
+pkglibexecdir = $(libexecdir)/Buenos
 am__cd = CDPATH="$${ZSH_VERSION+.}$(PATH_SEPARATOR)" && cd
 install_sh_DATA = $(install_sh) -c -m 644
 install_sh_PROGRAM = $(install_sh) -c
@@ -232,7 +232,8 @@ am__DIST_COMMON = $(srcdir)/Makefile.in \
 	$(top_srcdir)/src/config/bitcoin-config.h.in \
 	$(top_srcdir)/src/test/buildenv.py.in COPYING \
 	build-aux/compile build-aux/config.guess build-aux/config.sub \
-	build-aux/install-sh build-aux/ltmain.sh build-aux/missing
+	build-aux/depcomp build-aux/install-sh build-aux/ltmain.sh \
+	build-aux/missing
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
 distdir = $(PACKAGE)-$(VERSION)
 top_distdir = $(distdir)
@@ -274,21 +275,21 @@ distuninstallcheck_listfiles = find . -type f -print
 am__distuninstallcheck_listfiles = $(distuninstallcheck_listfiles) \
   | sed 's|^\./|$(prefix)/|' | grep -v '$(infodir)/dir$$'
 distcleancheck_listfiles = find . -type f -print
-ACLOCAL = ${SHELL} /home/o/Buenas/build-aux/missing aclocal-1.15
+ACLOCAL = ${SHELL} /home/o/Buenos/build-aux/missing aclocal-1.15
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 0
 AR = /usr/bin/ar
-AUTOCONF = ${SHELL} /home/o/Buenas/build-aux/missing autoconf
-AUTOHEADER = ${SHELL} /home/o/Buenas/build-aux/missing autoheader
-AUTOMAKE = ${SHELL} /home/o/Buenas/build-aux/missing automake-1.15
+AUTOCONF = ${SHELL} /home/o/Buenos/build-aux/missing autoconf
+AUTOHEADER = ${SHELL} /home/o/Buenos/build-aux/missing autoheader
+AUTOMAKE = ${SHELL} /home/o/Buenos/build-aux/missing automake-1.15
 AWK = mawk
 BDB_CFLAGS = 
 BDB_CPPFLAGS = 
 BDB_LIBS = -ldb_cxx-4.8
-BITCOIN_CLI_NAME = Buenas-cli
-BITCOIN_DAEMON_NAME = Buenasd
-BITCOIN_GUI_NAME = Buenas-qt
-BITCOIN_TX_NAME = Buenas-tx
+BITCOIN_CLI_NAME = Buenos-cli
+BITCOIN_DAEMON_NAME = Buenosd
+BITCOIN_GUI_NAME = Buenos-qt
+BITCOIN_TX_NAME = Buenos-tx
 BOOST_CHRONO_LIB = -lboost_chrono
 BOOST_CPPFLAGS = -pthread -I/usr/include
 BOOST_FILESYSTEM_LIB = -lboost_filesystem
@@ -309,8 +310,8 @@ CLIENT_VERSION_MAJOR = 0
 CLIENT_VERSION_MINOR = 1
 CLIENT_VERSION_REVISION = 1
 COPYRIGHT_HOLDERS = The %s developers
-COPYRIGHT_HOLDERS_FINAL = The Buenas developers
-COPYRIGHT_HOLDERS_SUBSTITUTION = Buenas
+COPYRIGHT_HOLDERS_FINAL = The Buenos developers
+COPYRIGHT_HOLDERS_SUBSTITUTION = Buenos
 COPYRIGHT_YEAR = 2017
 CPP = gcc -E
 CPPFILT = /usr/bin/c++filt
@@ -374,9 +375,9 @@ LTLIBOBJS =
 LT_SYS_LIBRARY_PATH = 
 LUPDATE = /usr/lib/x86_64-linux-gnu/qt5/bin/lupdate
 MAINT = 
-MAKEINFO = ${SHELL} /home/o/Buenas/build-aux/missing makeinfo
+MAKEINFO = ${SHELL} /home/o/Buenos/build-aux/missing makeinfo
 MAKENSIS = 
-BUENFEST_TOOL = :
+MANIFEST_TOOL = :
 MINIUPNPC_CPPFLAGS = 
 MINIUPNPC_LIBS = -lminiupnpc
 MKDIR_P = /bin/mkdir -p
@@ -392,12 +393,12 @@ OBJDUMP = objdump
 OBJEXT = o
 OTOOL = 
 OTOOL64 = 
-PACKAGE = Buenas
+PACKAGE = Buenos
 PACKAGE_BUGREPORT = https://github.com/bitcoin/bitcoin/issues
-PACKAGE_NAME = Buenas
-PACKAGE_STRING = Buenas 0.1.1
-PACKAGE_TARNAME = Buenas
-PACKAGE_URL = https://Buenas.org/
+PACKAGE_NAME = Buenos
+PACKAGE_STRING = Buenos 0.1.1
+PACKAGE_TARNAME = Buenos
+PACKAGE_URL = https://Buenos.org/
 PACKAGE_VERSION = 0.1.1
 PATH_SEPARATOR = :
 PIC_FLAGS = -fPIC
@@ -461,10 +462,10 @@ X11XCB_LIBS =
 XGETTEXT = /usr/bin/xgettext
 ZMQ_CFLAGS = 
 ZMQ_LIBS = -lzmq
-abs_builddir = /home/o/Buenas
-abs_srcdir = /home/o/Buenas
-abs_top_builddir = /home/o/Buenas
-abs_top_srcdir = /home/o/Buenas
+abs_builddir = /home/o/Buenos
+abs_srcdir = /home/o/Buenos
+abs_top_builddir = /home/o/Buenos
+abs_top_srcdir = /home/o/Buenos
 ac_ct_AR = ar
 ac_ct_CC = gcc
 ac_ct_CXX = g++
@@ -496,7 +497,7 @@ host_vendor = pc
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/o/Buenas/build-aux/install-sh
+install_sh = ${SHELL} /home/o/Buenos/build-aux/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -529,7 +530,7 @@ BITCOIN_CLI_BIN = $(top_builddir)/src/$(BITCOIN_CLI_NAME)$(EXEEXT)
 BITCOIN_WIN_INSTALLER = $(PACKAGE)-$(PACKAGE_VERSION)-win$(WINDOWS_BITS)-setup$(EXEEXT)
 empty := 
 space := $(empty) $(empty)
-OSX_APP = Buenas-Qt.app
+OSX_APP = Buenos-Qt.app
 OSX_VOLNAME = $(subst $(space),-,$(PACKAGE_NAME))
 OSX_DMG = $(OSX_VOLNAME).dmg
 OSX_BACKGROUND_SVG = background.svg
@@ -538,7 +539,7 @@ OSX_BACKGROUND_IMAGE_DPIS = 36 72
 OSX_DSSTORE_GEN = $(top_srcdir)/contrib/macdeploy/custom_dsstore.py
 OSX_DEPLOY_SCRIPT = $(top_srcdir)/contrib/macdeploy/macdeployqtplus
 OSX_FANCY_PLIST = $(top_srcdir)/contrib/macdeploy/fancy.plist
-OSX_INSTALLER_ICONS = $(top_srcdir)/src/qt/res/icons/Buenas.icns
+OSX_INSTALLER_ICONS = $(top_srcdir)/src/qt/res/icons/Buenos.icns
 OSX_PLIST = $(top_builddir)/share/qt/Info.plist #not installed
 OSX_QT_TRANSLATIONS = da,de,es,hu,ru,uk,zh_CN,zh_TW
 DIST_DOCS = $(wildcard doc/*.md) $(wildcard doc/release-notes/*.md)
@@ -551,7 +552,7 @@ DIST_CONTRIB = $(top_srcdir)/contrib/bitcoin-cli.bash-completion \
 BIN_CHECKS = $(top_srcdir)/contrib/devtools/symbol-check.py \
            $(top_srcdir)/contrib/devtools/security-check.py
 
-WINDOWS_PACKAGING = $(top_srcdir)/share/pixmaps/Buenas.ico \
+WINDOWS_PACKAGING = $(top_srcdir)/share/pixmaps/Buenos.ico \
   $(top_srcdir)/share/pixmaps/nsis-header.bmp \
   $(top_srcdir)/share/pixmaps/nsis-wizard.bmp \
   $(top_srcdir)/doc/README_windows.txt
@@ -568,8 +569,8 @@ COVERAGE_INFO = baseline_filtered_combined.info baseline.info \
   leveldb_baseline_filtered.info test_bitcoin_coverage.info test_bitcoin.info
 
 OSX_APP_BUILT = $(OSX_APP)/Contents/PkgInfo $(OSX_APP)/Contents/Resources/empty.lproj \
-  $(OSX_APP)/Contents/Resources/Buenas.icns $(OSX_APP)/Contents/Info.plist \
-  $(OSX_APP)/Contents/MacOS/Buenas-Qt $(OSX_APP)/Contents/Resources/Base.lproj/InfoPlist.strings
+  $(OSX_APP)/Contents/Resources/Buenos.icns $(OSX_APP)/Contents/Info.plist \
+  $(OSX_APP)/Contents/MacOS/Buenos-Qt $(OSX_APP)/Contents/Resources/Base.lproj/InfoPlist.strings
 
 APP_DIST_DIR = $(top_builddir)/dist
 APP_DIST_EXTRAS = $(APP_DIST_DIR)/.background/$(OSX_BACKGROUND_IMAGE) $(APP_DIST_DIR)/.DS_Store $(APP_DIST_DIR)/Applications
@@ -1128,11 +1129,11 @@ $(OSX_APP)/Contents/Info.plist: $(OSX_PLIST)
 	$(MKDIR_P) $(@D)
 	$(INSTALL_DATA) $< $@
 
-$(OSX_APP)/Contents/Resources/Buenas.icns: $(OSX_INSTALLER_ICONS)
+$(OSX_APP)/Contents/Resources/Buenos.icns: $(OSX_INSTALLER_ICONS)
 	$(MKDIR_P) $(@D)
 	$(INSTALL_DATA) $< $@
 
-$(OSX_APP)/Contents/MacOS/Buenas-Qt: $(BITCOIN_QT_BIN)
+$(OSX_APP)/Contents/MacOS/Buenos-Qt: $(BITCOIN_QT_BIN)
 	$(MKDIR_P) $(@D)
 	STRIPPROG="$(STRIP)" $(INSTALL_STRIP_PROGRAM)  $< $@
 
@@ -1159,7 +1160,7 @@ $(APP_DIST_DIR)/Applications:
 	@rm -f $@
 	@cd $(@D); $(LN_S) /Applications $(@F)
 
-$(APP_DIST_EXTRAS): $(APP_DIST_DIR)/$(OSX_APP)/Contents/MacOS/Buenas-Qt
+$(APP_DIST_EXTRAS): $(APP_DIST_DIR)/$(OSX_APP)/Contents/MacOS/Buenos-Qt
 
 $(OSX_DMG): $(APP_DIST_EXTRAS)
 	$(GENISOIMAGE) -no-cache-inodes -D -l -probe -V "$(OSX_VOLNAME)" -no-pad -r -dir-mode 0755 -apple -o $@ dist
@@ -1173,7 +1174,7 @@ $(APP_DIST_DIR)/.background/$(OSX_BACKGROUND_IMAGE): $(OSX_BACKGROUND_IMAGE_DPIF
 $(APP_DIST_DIR)/.DS_Store: $(OSX_DSSTORE_GEN)
 	$(PYTHON) $< "$@" "$(OSX_VOLNAME)"
 
-$(APP_DIST_DIR)/$(OSX_APP)/Contents/MacOS/Buenas-Qt: $(OSX_APP_BUILT) $(OSX_PACKAGING)
+$(APP_DIST_DIR)/$(OSX_APP)/Contents/MacOS/Buenos-Qt: $(OSX_APP_BUILT) $(OSX_PACKAGING)
 	INSTALLNAMETOOL=$(INSTALLNAMETOOL)  OTOOL=$(OTOOL) STRIP=$(STRIP) $(PYTHON) $(OSX_DEPLOY_SCRIPT) $(OSX_APP) -translations-dir=$(QT_TRANSLATION_DIR) -add-qt-tr $(OSX_QT_TRANSLATIONS) -verbose 2
 
 deploydir: $(APP_DIST_EXTRAS)

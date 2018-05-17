@@ -158,8 +158,8 @@
         <translation>Otvori &amp;URI...</translation>
     </message>
     <message>
-        <source>Send coins to a Buenas address</source>
-        <translation>Pošalji novčiće na Buenas adresu</translation>
+        <source>Send coins to a Buenos address</source>
+        <translation>Pošalji novčiće na Buenos adresu</translation>
     </message>
     <message>
         <source>&amp;Verify message...</source>
@@ -406,8 +406,8 @@
 <context>
     <name>bitcoin-core</name>
     <message>
-        <source>Buenas Core</source>
-        <translation>Buenas Core</translation>
+        <source>Buenos Core</source>
+        <translation>Buenos Core</translation>
     </message>
     <message>
         <source>Information</source>

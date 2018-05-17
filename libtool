@@ -1,5 +1,5 @@
 #! /bin/bash
-# Generated automatically by config.status (Buenas) 0.1.1
+# Generated automatically by config.status (Buenos) 0.1.1
 # Libtool was configured on host o-VirtualBox:
 # NOTE: Changes made to this file will be lost: look at ltmain.sh.
 
@@ -45,13 +45,13 @@ macro_revision=2.4.6
 pic_mode=yes
 
 # Whether or not to build shared libraries.
-build_libtool_libs=yes
+build_libtool_libs=no
 
 # Whether or not to build static libraries.
 build_old_libs=yes
 
 # Whether or not to optimize for fast installation.
-fast_install=yes
+fast_install=needless
 
 # Shared archive member basename,for filename based shared library versioning on AIX.
 shared_archive_member_spec=
@@ -204,15 +204,15 @@ MAGIC_CMD=file
 need_locks="no"
 
 # Manifest tool.
-BUENFEST_TOOL=":"
+MANIFEST_TOOL=":"
 
-# Tool to buenpulate archived DWARF debug symbol files on Mac OS X.
+# Tool to manipulate archived DWARF debug symbol files on Mac OS X.
 DSYMUTIL=""
 
 # Tool to change global to local symbols on Mac OS X.
 NMEDIT=""
 
-# Tool to buenpulate fat objects and archives on Mac OS X.
+# Tool to manipulate fat objects and archives on Mac OS X.
 LIPO=""
 
 # ldd/readelf like tool for Mach-O binaries on Mac OS X.
@@ -336,7 +336,7 @@ link_static_flag="-static"
 compiler_c_o="yes"
 
 # Whether or not to add -lc for building shared libraries.
-build_libtool_need_lc=no
+build_libtool_need_lc=yes
 
 # Whether or not to disallow shared libs when runtime libs are static.
 allow_libtool_libs_with_static_runtimes=no
@@ -379,7 +379,7 @@ no_undefined_flag=""
 
 # Flag to hardcode $libdir into a binary during linking.
 # This must work even if $libdir does not exist
-hardcode_libdir_flag_spec=" -D__LIBTOOL_IS_A_FOOL__ "
+hardcode_libdir_flag_spec="\$wl-rpath \$wl\$libdir"
 
 # Whether we need a single "-rpath" flag with a separated argument.
 hardcode_libdir_separator=""
@@ -11741,7 +11741,7 @@ no_undefined_flag=""
 
 # Flag to hardcode $libdir into a binary during linking.
 # This must work even if $libdir does not exist
-hardcode_libdir_flag_spec=" -D__LIBTOOL_IS_A_FOOL__ "
+hardcode_libdir_flag_spec="\$wl-rpath \$wl\$libdir"
 
 # Whether we need a single "-rpath" flag with a separated argument.
 hardcode_libdir_separator=""

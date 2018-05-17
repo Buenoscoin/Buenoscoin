@@ -126,7 +126,7 @@
         <translation>Abrir &amp;URL...</translation>
     </message>
     <message>
-        <source>Send coins to a Buenas address</source>
+        <source>Send coins to a Buenos address</source>
         <translation>Enviando monedas a una dirección de Bitcoin</translation>
     </message>
     <message>
@@ -296,8 +296,8 @@
 <context>
     <name>bitcoin-core</name>
     <message>
-        <source>Buenas Core</source>
-        <translation>Buenas Core</translation>
+        <source>Buenos Core</source>
+        <translation>Buenos Core</translation>
     </message>
     <message>
         <source>Insufficient funds</source>

@@ -62,12 +62,12 @@
         <translation>Recibiendo direcciones</translation>
     </message>
     <message>
-        <source>These are your Buenas addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Estas son sus direcciones Buenas para enviar pagos. Verifique siempre la cantidad y la dirección de recibimiento antes de enviar monedas.</translation>
+        <source>These are your Buenos addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Estas son sus direcciones Buenos para enviar pagos. Verifique siempre la cantidad y la dirección de recibimiento antes de enviar monedas.</translation>
     </message>
     <message>
-        <source>These are your Buenas addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Estas son sus direcciones Buenas para recibir pagos. Se recomienda utilizar una nueva dirección de recibimiento para cada transacción</translation>
+        <source>These are your Buenos addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Estas son sus direcciones Buenos para recibir pagos. Se recomienda utilizar una nueva dirección de recibimiento para cada transacción</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -338,7 +338,7 @@
         <translation>Reindexando bloques en disco...</translation>
     </message>
     <message>
-        <source>Send coins to a Buenas address</source>
+        <source>Send coins to a Buenos address</source>
         <translation>Enviar bitcoins a una dirección Bitcoin</translation>
     </message>
     <message>
@@ -390,12 +390,12 @@
         <translation>Cifrar las claves privadas de su monedero</translation>
     </message>
     <message>
-        <source>Sign messages with your Buenas addresses to prove you own them</source>
-        <translation>Firmar mensajes con sus direcciones Buenas para demostrar la propiedad</translation>
+        <source>Sign messages with your Buenos addresses to prove you own them</source>
+        <translation>Firmar mensajes con sus direcciones Buenos para demostrar la propiedad</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Buenas addresses</source>
-        <translation>Verificar mensajes comprobando que están firmados con direcciones Buenas concretas</translation>
+        <source>Verify messages to ensure they were signed with specified Buenos addresses</source>
+        <translation>Verificar mensajes comprobando que están firmados con direcciones Buenos concretas</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -434,7 +434,7 @@
         <translation>&amp;Opciones de consola de comandos</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Buenas network</source>
+        <source>%n active connection(s) to Buenos network</source>
         <translation><numerusform>%n conexión activa hacia la red Bitcoin</numerusform><numerusform>%n conexiones activas hacia la red Bitcoin</numerusform></translation>
     </message>
     <message>
@@ -478,7 +478,7 @@
         <translation>Actualizado</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Buenas command-line options</source>
+        <source>Show the %1 help message to get a list with possible Buenos command-line options</source>
         <translation>Mostrar el mensaje de ayuda %1 para obtener una lista de los posibles comandos de linea de comandos de Bitcoin</translation>
     </message>
     <message>
@@ -536,8 +536,8 @@
         <translation>El monedero está &lt;b&gt;cifrado&lt;/b&gt; y actualmente &lt;b&gt;bloqueado&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. Buenas can no longer continue safely and will quit.</source>
-        <translation>Ha ocurrido un error fatal. Buenas no puede continuar de manera segura y se cerrará.</translation>
+        <source>A fatal error occurred. Buenos can no longer continue safely and will quit.</source>
+        <translation>Ha ocurrido un error fatal. Buenos no puede continuar de manera segura y se cerrará.</translation>
     </message>
 </context>
 <context>
@@ -730,8 +730,8 @@
         <translation>Editar dirección de envío</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Buenas address.</source>
-        <translation>La dirección introducida "%1" no es una dirección Buenas válida.</translation>
+        <source>The entered address "%1" is not a valid Buenos address.</source>
+        <translation>La dirección introducida "%1" no es una dirección Buenos válida.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -839,7 +839,7 @@
         <translation>Al ser la primera vez que se ejecuta el programa, puede elegir donde %1 almacenara sus datos</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the Buenas block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <source>%1 will download and store a copy of the Buenos block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
         <translation>%1 va a descargar y almacenar una copia de la cadena de bloques de Bitcoin. Al menos %2GB de datos seran almacenados en este directorio, que ira creciendo con el tiempo. El monedero se guardara tambien en ese directorio. </translation>
     </message>
     <message>
@@ -1028,16 +1028,16 @@
         <translation>&amp;Gastar cambio no confirmado</translation>
     </message>
     <message>
-        <source>Automatically open the Buenas client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Abrir automáticamente el puerto del cliente Buenas en el router. Esta opción solo funciona si el router admite UPnP y está activado.</translation>
+        <source>Automatically open the Buenos client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Abrir automáticamente el puerto del cliente Buenos en el router. Esta opción solo funciona si el router admite UPnP y está activado.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Mapear el puerto mediante &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the Buenas network through a SOCKS5 proxy.</source>
-        <translation>Conectarse a la red Buenas a través de un proxy SOCKS5.</translation>
+        <source>Connect to the Buenos network through a SOCKS5 proxy.</source>
+        <translation>Conectarse a la red Buenos a través de un proxy SOCKS5.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1076,8 +1076,8 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the Buenas network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Conectar a la red Buenas mediante un proxy SOCKS5 por separado para los servicios ocultos de Tor.</translation>
+        <source>Connect to the Buenos network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Conectar a la red Buenos mediante un proxy SOCKS5 por separado para los servicios ocultos de Tor.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services:</source>
@@ -1175,8 +1175,8 @@
         <translation>Formulario</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Buenas network after a connection is established, but this process has not completed yet.</source>
-        <translation>La información mostrada puede estar desactualizada. Su monedero se sincroniza automáticamente con la red Buenas después de que se haya establecido una conexión, pero este proceso aún no se ha completado.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Buenos network after a connection is established, but this process has not completed yet.</source>
+        <translation>La información mostrada puede estar desactualizada. Su monedero se sincroniza automáticamente con la red Buenos después de que se haya establecido una conexión, pero este proceso aún no se ha completado.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1266,8 +1266,8 @@
         <translation>Dirección de pago inválida %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Buenas address or malformed URI parameters.</source>
-        <translation>URI no puede ser analizado! Esto puede ser causado por una dirección Buenas inválida o parametros URI mal formados.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid Buenos address or malformed URI parameters.</source>
+        <translation>URI no puede ser analizado! Esto puede ser causado por una dirección Buenos inválida o parametros URI mal formados.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -1356,8 +1356,8 @@
         <translation>Cantidad</translation>
     </message>
     <message>
-        <source>Enter a Buenas address (e.g. %1)</source>
-        <translation>Introducir una dirección Buenas (p. ej. %1)</translation>
+        <source>Enter a Buenos address (e.g. %1)</source>
+        <translation>Introducir una dirección Buenos (p. ej. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1724,7 +1724,7 @@
         <translation>R&amp;eutilizar una dirección existente para recibir (no recomendado)</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Buenas network.</source>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Buenos network.</source>
         <translation>Un mensaje opcional para adjuntar a la solicitud de pago, que se muestra cuando se abre la solicitud. Nota: El mensaje no se enviará con el pago por la red Bitcoin.</translation>
     </message>
     <message>
@@ -1954,7 +1954,7 @@
     </message>
     <message>
         <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for bitcoin transactions than the network can process.</source>
-        <translation>Pagando solamente la cuota mínima es correcto, siempre y cuando haya menos volumen de transacciones que el espacio en los bloques. Pero tenga en cuenta que esto puede terminar en una transacción nunca confirmada, una vez que haya más demanda para transacciones Buenas que la red pueda procesar.</translation>
+        <translation>Pagando solamente la cuota mínima es correcto, siempre y cuando haya menos volumen de transacciones que el espacio en los bloques. Pero tenga en cuenta que esto puede terminar en una transacción nunca confirmada, una vez que haya más demanda para transacciones Buenos que la red pueda procesar.</translation>
     </message>
     <message>
         <source>(read the tooltip)</source>
@@ -2105,8 +2105,8 @@
         <translation>Pagar únicamente la cuota solicitada de %1</translation>
     </message>
     <message>
-        <source>Warning: Invalid Buenas address</source>
-        <translation>Alerta: dirección Buenas inválida</translation>
+        <source>Warning: Invalid Buenos address</source>
+        <translation>Alerta: dirección Buenos inválida</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2140,8 +2140,8 @@
         <translation>Esto es un pago ordinario.</translation>
     </message>
     <message>
-        <source>The Buenas address to send the payment to</source>
-        <translation>Dirección Buenas a la que enviar el pago</translation>
+        <source>The Buenos address to send the payment to</source>
+        <translation>Dirección Buenos a la que enviar el pago</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -2184,7 +2184,7 @@
         <translation>Introduce una etiqueta para esta dirección para añadirla a la lista de direcciones utilizadas</translation>
     </message>
     <message>
-        <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Buenas network.</source>
+        <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Buenos network.</source>
         <translation>Un mensaje que se adjuntó a la bitcoin: URL que será almacenada con la transacción para su referencia. Nota: Este mensaje no se envía a través de la red Bitcoin.</translation>
     </message>
     <message>
@@ -2233,8 +2233,8 @@
         <translation>Puede firmar los mensajes con sus direcciones para demostrar que las posee. Tenga cuidado de no firmar cualquier cosa de manera vaga o aleatoria, pues los ataques de phishing pueden tratar de engañarle firmando su identidad a través de ellos. Sólo firme declaraciones totalmente detalladas con las que usted esté de acuerdo.</translation>
     </message>
     <message>
-        <source>The Buenas address to sign the message with</source>
-        <translation>Dirección Buenas con la que firmar el mensaje</translation>
+        <source>The Buenos address to sign the message with</source>
+        <translation>Dirección Buenos con la que firmar el mensaje</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2265,7 +2265,7 @@
         <translation>Copiar la firma actual al portapapeles del sistema</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Buenas address</source>
+        <source>Sign the message to prove you own this Buenos address</source>
         <translation>Firmar el mensaje para demostrar que se posee esta dirección Bitcoin</translation>
     </message>
     <message>
@@ -2289,12 +2289,12 @@
         <translation>Introduzca la dirección para la firma, el mensaje (asegurándose de copiar tal cual los saltos de línea, espacios, tabulaciones, etc.) y la firma a continuación para verificar el mensaje. Tenga cuidado de no asumir más información de lo que dice el propio mensaje firmado para evitar fraudes basados en ataques de tipo man-in-the-middle. </translation>
     </message>
     <message>
-        <source>The Buenas address the message was signed with</source>
-        <translation>La dirección Buenas con la que se firmó el mensaje</translation>
+        <source>The Buenos address the message was signed with</source>
+        <translation>La dirección Buenos con la que se firmó el mensaje</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Buenas address</source>
-        <translation>Verificar el mensaje para comprobar que fue firmado con la dirección Buenas indicada</translation>
+        <source>Verify the message to ensure it was signed with the specified Buenos address</source>
+        <translation>Verificar el mensaje para comprobar que fue firmado con la dirección Buenos indicada</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -2925,8 +2925,8 @@
         <translation>No se ha podido comenzar el servidor HTTP. Ver debug log para detalles.</translation>
     </message>
     <message>
-        <source>Buenas Core</source>
-        <translation>Buenas Core</translation>
+        <source>Buenos Core</source>
+        <translation>Buenos Core</translation>
     </message>
     <message>
         <source>The %s developers</source>

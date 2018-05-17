@@ -1,4 +1,4 @@
-Name "Buenas (-bit)"
+Name "Buenos (-bit)"
 
 RequestExecutionLevel highest
 SetCompressor /SOLID lzma
@@ -6,23 +6,23 @@ SetCompressor /SOLID lzma
 # General Symbol Definitions
 !define REGKEY "SOFTWARE\$(^Name)"
 !define VERSION 0.1.1
-!define COMPANY "Buenas project"
-!define URL https://Buenas.org/
+!define COMPANY "Buenos project"
+!define URL https://Buenos.org/
 
 # MUI Symbol Definitions
-!define MUI_ICON "/home/o/Buenas/share/pixmaps/Buenas.ico"
-!define MUI_WELCOMEFINISHPAGE_BITMAP "/home/o/Buenas/share/pixmaps/nsis-wizard.bmp"
+!define MUI_ICON "/home/o/Buenos/share/pixmaps/Buenos.ico"
+!define MUI_WELCOMEFINISHPAGE_BITMAP "/home/o/Buenos/share/pixmaps/nsis-wizard.bmp"
 !define MUI_HEADERIMAGE
 !define MUI_HEADERIMAGE_RIGHT
-!define MUI_HEADERIMAGE_BITMAP "/home/o/Buenas/share/pixmaps/nsis-header.bmp"
+!define MUI_HEADERIMAGE_BITMAP "/home/o/Buenos/share/pixmaps/nsis-header.bmp"
 !define MUI_FINISHPAGE_NOAUTOCLOSE
 !define MUI_STARTMENUPAGE_REGISTRY_ROOT HKLM
 !define MUI_STARTMENUPAGE_REGISTRY_KEY ${REGKEY}
 !define MUI_STARTMENUPAGE_REGISTRY_VALUENAME StartMenuGroup
-!define MUI_STARTMENUPAGE_DEFAULTFOLDER "Buenas"
-!define MUI_FINISHPAGE_RUN $INSTDIR\Buenas-qt
+!define MUI_STARTMENUPAGE_DEFAULTFOLDER "Buenos"
+!define MUI_FINISHPAGE_RUN $INSTDIR\Buenos-qt
 !define MUI_UNICON "${NSISDIR}\Contrib\Graphics\Icons\modern-uninstall.ico"
-!define MUI_UNWELCOMEFINISHPAGE_BITMAP "/home/o/Buenas/share/pixmaps/nsis-wizard.bmp"
+!define MUI_UNWELCOMEFINISHPAGE_BITMAP "/home/o/Buenos/share/pixmaps/nsis-wizard.bmp"
 !define MUI_UNFINISHPAGE_NOAUTOCLOSE
 
 # Included files
@@ -48,7 +48,7 @@ Var StartMenuGroup
 !insertmacro MUI_LANGUAGE English
 
 # Installer attributes
-OutFile /home/o/Buenas/Buenas-${VERSION}-win-setup.exe
+OutFile /home/o/Buenos/Buenos-${VERSION}-win-setup.exe
 !if "" == "64"
 InstallDir $PROGRAMFILES64\Bitcoin
 !else
@@ -59,7 +59,7 @@ XPStyle on
 BrandingText " "
 ShowInstDetails show
 VIProductVersion ${VERSION}.0
-VIAddVersionKey ProductName "Buenas"
+VIAddVersionKey ProductName "Buenos"
 VIAddVersionKey ProductVersion "${VERSION}"
 VIAddVersionKey CompanyName "${COMPANY}"
 VIAddVersionKey CompanyWebsite "${URL}"
@@ -73,14 +73,14 @@ ShowUninstDetails show
 Section -Main SEC0000
     SetOutPath $INSTDIR
     SetOverwrite on
-    File /home/o/Buenas/release/Buenas-qt
-    File /oname=COPYING.txt /home/o/Buenas/COPYING
-    File /oname=readme.txt /home/o/Buenas/doc/README_windows.txt
+    File /home/o/Buenos/release/Buenos-qt
+    File /oname=COPYING.txt /home/o/Buenos/COPYING
+    File /oname=readme.txt /home/o/Buenos/doc/README_windows.txt
     SetOutPath $INSTDIR\daemon
-    File /home/o/Buenas/release/Buenasd
-    File /home/o/Buenas/release/Buenas-cli
+    File /home/o/Buenos/release/Buenosd
+    File /home/o/Buenos/release/Buenos-cli
     SetOutPath $INSTDIR\doc
-    File /r /home/o/Buenas/doc\*.*
+    File /r /home/o/Buenos/doc\*.*
     SetOutPath $INSTDIR
     WriteRegStr HKCU "${REGKEY}\Components" Main 1
 SectionEnd
@@ -91,8 +91,8 @@ Section -post SEC0001
     WriteUninstaller $INSTDIR\uninstall.exe
     !insertmacro MUI_STARTMENU_WRITE_BEGIN Application
     CreateDirectory $SMPROGRAMS\$StartMenuGroup
-    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\$(^Name).lnk" $INSTDIR\Buenas-qt
-    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\Buenas (testnet, -bit).lnk" "$INSTDIR\Buenas-qt" "-testnet" "$INSTDIR\Buenas-qt" 1
+    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\$(^Name).lnk" $INSTDIR\Buenos-qt
+    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\Buenos (testnet, -bit).lnk" "$INSTDIR\Buenos-qt" "-testnet" "$INSTDIR\Buenos-qt" 1
     CreateShortcut "$SMPROGRAMS\$StartMenuGroup\Uninstall $(^Name).lnk" $INSTDIR\uninstall.exe
     !insertmacro MUI_STARTMENU_WRITE_END
     WriteRegStr HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" DisplayName "$(^Name)"
@@ -103,10 +103,10 @@ Section -post SEC0001
     WriteRegStr HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" UninstallString $INSTDIR\uninstall.exe
     WriteRegDWORD HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" NoModify 1
     WriteRegDWORD HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" NoRepair 1
-    WriteRegStr HKCR "Buenas" "URL Protocol" ""
-    WriteRegStr HKCR "Buenas" "" "URL:Bitcoin"
-    WriteRegStr HKCR "Buenas\DefaultIcon" "" $INSTDIR\Buenas-qt
-    WriteRegStr HKCR "Buenas\shell\open\command" "" '"$INSTDIR\Buenas-qt" "%1"'
+    WriteRegStr HKCR "Buenos" "URL Protocol" ""
+    WriteRegStr HKCR "Buenos" "" "URL:Bitcoin"
+    WriteRegStr HKCR "Buenos\DefaultIcon" "" $INSTDIR\Buenos-qt
+    WriteRegStr HKCR "Buenos\shell\open\command" "" '"$INSTDIR\Buenos-qt" "%1"'
 SectionEnd
 
 # Macro for selecting uninstaller sections
@@ -124,7 +124,7 @@ done${UNSECTION_ID}:
 
 # Uninstaller sections
 Section /o -un.Main UNSEC0000
-    Delete /REBOOTOK $INSTDIR\Buenas-qt
+    Delete /REBOOTOK $INSTDIR\Buenos-qt
     Delete /REBOOTOK $INSTDIR\COPYING.txt
     Delete /REBOOTOK $INSTDIR\readme.txt
     RMDir /r /REBOOTOK $INSTDIR\daemon
@@ -136,7 +136,7 @@ Section -un.post UNSEC0001
     DeleteRegKey HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)"
     Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\Uninstall $(^Name).lnk"
     Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\$(^Name).lnk"
-    Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\Buenas (testnet, -bit).lnk"
+    Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\Buenos (testnet, -bit).lnk"
     Delete /REBOOTOK "$SMSTARTUP\Bitcoin.lnk"
     Delete /REBOOTOK $INSTDIR\uninstall.exe
     Delete /REBOOTOK $INSTDIR\debug.log
@@ -145,7 +145,7 @@ Section -un.post UNSEC0001
     DeleteRegValue HKCU "${REGKEY}" Path
     DeleteRegKey /IfEmpty HKCU "${REGKEY}\Components"
     DeleteRegKey /IfEmpty HKCU "${REGKEY}"
-    DeleteRegKey HKCR "Buenas"
+    DeleteRegKey HKCR "Buenos"
     RmDir /REBOOTOK $SMPROGRAMS\$StartMenuGroup
     RmDir /REBOOTOK $INSTDIR
     Push $R0

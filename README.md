@@ -1,23 +1,23 @@
-Buenas
+Buenos
 ============
 
-https://Buenascoin.io
+https://Buenoscoin.io
 
-What is Buenas?
+What is Buenos?
 ---------------------
 
-Buenas is a cryptocurrency for Argentina
+Buenos is a cryptocurrency for Argentina
 
 License
 -------
 
-Buenas is released under the terms of the MIT license. See [COPYING](COPYING) for more
+Buenos is released under the terms of the MIT license. See [COPYING](COPYING) for more
 information or see https://opensource.org/licenses/MIT.
 
 Credits
 -------
 
-Buenas was forked from Bitcoin Core, more specifically from Manila
+Buenos was forked from Bitcoin Core, more specifically from Manila
 
 * [bitcoin](https://github.com/bitcoin/bitcoin)
 * [CryptoCoderz](https://github.com/CryptoCoderz/Espers.git) HMQ1725

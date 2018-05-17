@@ -11,13 +11,13 @@
   </array>
 
   <key>CFBundleIconFile</key>
-  <string>Buenas.icns</string>
+  <string>Buenos.icns</string>
 
   <key>CFBundlePackageType</key>
   <string>APPL</string>
 
   <key>CFBundleGetInfoString</key>
-  <string>0.1.1, Copyright © 2009-2017 The Buenas developers</string>
+  <string>0.1.1, Copyright © 2009-2017 The Buenos developers</string>
 
   <key>CFBundleShortVersionString</key>
   <string>0.1.1</string>
@@ -29,16 +29,16 @@
   <string>????</string>
 
   <key>CFBundleExecutable</key>
-  <string>Buenas-Qt</string>
+  <string>Buenos-Qt</string>
   
   <key>CFBundleName</key>
-  <string>Buenas-Qt</string>
+  <string>Buenos-Qt</string>
 
   <key>LSHasLocalizedDisplayName</key>
   <true/>
 
   <key>CFBundleIdentifier</key>
-  <string>org.Buenas.Buenas-Qt</string>
+  <string>org.Buenos.Buenos-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>
@@ -46,10 +46,10 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
-      <string>org.Buenas.BuenasPayment</string>
+      <string>org.Buenos.BuenosPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
-        <string>Buenas</string>
+        <string>Buenos</string>
       </array>
     </dict>
   </array>
@@ -58,9 +58,9 @@
   <array>
     <dict>
       <key>UTTypeIdentifier</key>
-      <string>org.Buenas.paymentrequest</string>
+      <string>org.Buenos.paymentrequest</string>
       <key>UTTypeDescription</key>
-      <string>Buenas payment request</string>
+      <string>Buenos payment request</string>
       <key>UTTypeConformsTo</key>
       <array>
         <string>public.data</string>
@@ -68,10 +68,10 @@
       <key>UTTypeTagSpecification</key>
       <dict>
         <key>public.mime-type</key>
-        <string>application/x-Buenas-payment-request</string>
+        <string>application/x-Buenos-payment-request</string>
         <key>public.filename-extension</key>
         <array>
-          <string>Buenaspaymentrequest</string>
+          <string>Buenospaymentrequest</string>
         </array>
       </dict>
     </dict>
@@ -84,7 +84,7 @@
       <string>Editor</string>
       <key>LSItemContentTypes</key>
       <array>
-        <string>org.Buenas.paymentrequest</string>
+        <string>org.Buenos.paymentrequest</string>
       </array>
       <key>LSHandlerRank</key>
       <string>Owner</string>

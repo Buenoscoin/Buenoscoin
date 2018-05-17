@@ -984,11 +984,11 @@ m4_defun_once([_LT_REQUIRED_DARWIN_CHECKS],[
     AC_CHECK_TOOL([OTOOL], [otool], [:])
     AC_CHECK_TOOL([OTOOL64], [otool64], [:])
     _LT_DECL([], [DSYMUTIL], [1],
-      [Tool to buenpulate archived DWARF debug symbol files on Mac OS X])
+      [Tool to manipulate archived DWARF debug symbol files on Mac OS X])
     _LT_DECL([], [NMEDIT], [1],
       [Tool to change global to local symbols on Mac OS X])
     _LT_DECL([], [LIPO], [1],
-      [Tool to buenpulate fat objects and archives on Mac OS X])
+      [Tool to manipulate fat objects and archives on Mac OS X])
     _LT_DECL([], [OTOOL], [1],
       [ldd/readelf like tool for Mach-O binaries on Mac OS X])
     _LT_DECL([], [OTOOL64], [1],
@@ -3809,26 +3809,26 @@ _LT_DECL([], [sharedlib_from_linklib_cmd], [1],
 ])# _LT_CHECK_SHAREDLIB_FROM_LINKLIB
 
 
-# _LT_PATH_BUENFEST_TOOL
+# _LT_PATH_MANIFEST_TOOL
 # ----------------------
-# locate the buenfest tool
-m4_defun([_LT_PATH_BUENFEST_TOOL],
-[AC_CHECK_TOOL(BUENFEST_TOOL, mt, :)
-test -z "$BUENFEST_TOOL" && BUENFEST_TOOL=mt
-AC_CACHE_CHECK([if $BUENFEST_TOOL is a buenfest tool], [lt_cv_path_mainfest_tool],
+# locate the manifest tool
+m4_defun([_LT_PATH_MANIFEST_TOOL],
+[AC_CHECK_TOOL(MANIFEST_TOOL, mt, :)
+test -z "$MANIFEST_TOOL" && MANIFEST_TOOL=mt
+AC_CACHE_CHECK([if $MANIFEST_TOOL is a manifest tool], [lt_cv_path_mainfest_tool],
   [lt_cv_path_mainfest_tool=no
-  echo "$as_me:$LINENO: $BUENFEST_TOOL '-?'" >&AS_MESSAGE_LOG_FD
-  $BUENFEST_TOOL '-?' 2>conftest.err > conftest.out
+  echo "$as_me:$LINENO: $MANIFEST_TOOL '-?'" >&AS_MESSAGE_LOG_FD
+  $MANIFEST_TOOL '-?' 2>conftest.err > conftest.out
   cat conftest.err >&AS_MESSAGE_LOG_FD
   if $GREP 'Manifest Tool' conftest.out > /dev/null; then
     lt_cv_path_mainfest_tool=yes
   fi
   rm -f conftest*])
 if test yes != "$lt_cv_path_mainfest_tool"; then
-  BUENFEST_TOOL=:
+  MANIFEST_TOOL=:
 fi
-_LT_DECL([], [BUENFEST_TOOL], [1], [Manifest tool])dnl
-])# _LT_PATH_BUENFEST_TOOL
+_LT_DECL([], [MANIFEST_TOOL], [1], [Manifest tool])dnl
+])# _LT_PATH_MANIFEST_TOOL
 
 
 # _LT_DLL_DEF_P([FILE])
@@ -4908,7 +4908,7 @@ _LT_TAGDECL([link_static_flag], [lt_prog_compiler_static], [1],
 m4_defun([_LT_LINKER_SHLIBS],
 [AC_REQUIRE([LT_PATH_LD])dnl
 AC_REQUIRE([LT_PATH_NM])dnl
-m4_require([_LT_PATH_BUENFEST_TOOL])dnl
+m4_require([_LT_PATH_MANIFEST_TOOL])dnl
 m4_require([_LT_FILEUTILS_DEFAULTS])dnl
 m4_require([_LT_DECL_EGREP])dnl
 m4_require([_LT_DECL_SED])dnl
@@ -5614,9 +5614,9 @@ _LT_EOF
               lt_tool_outputfile=$lt_tool_outputfile.exe
               ;;
           esac~
-          if test : != "$BUENFEST_TOOL" && test -f "$lt_outputfile.buenfest"; then
-            $BUENFEST_TOOL -buenfest "$lt_tool_outputfile.buenfest" -outputresource:"$lt_tool_outputfile" || exit 1;
-            $RM "$lt_outputfile.buenfest";
+          if test : != "$MANIFEST_TOOL" && test -f "$lt_outputfile.manifest"; then
+            $MANIFEST_TOOL -manifest "$lt_tool_outputfile.manifest" -outputresource:"$lt_tool_outputfile" || exit 1;
+            $RM "$lt_outputfile.manifest";
           fi'
 	;;
       *)
@@ -6305,7 +6305,7 @@ CC=$lt_save_CC
 m4_defun([_LT_LANG_CXX_CONFIG],
 [m4_require([_LT_FILEUTILS_DEFAULTS])dnl
 m4_require([_LT_DECL_EGREP])dnl
-m4_require([_LT_PATH_BUENFEST_TOOL])dnl
+m4_require([_LT_PATH_MANIFEST_TOOL])dnl
 if test -n "$CXX" && ( test no != "$CXX" &&
     ( (test g++ = "$CXX" && `g++ -v >/dev/null 2>&1` ) ||
     (test g++ != "$CXX"))); then
@@ -6687,9 +6687,9 @@ if test yes != "$_lt_caught_CXX_error"; then
                 ;;
             esac~
             func_to_tool_file "$lt_outputfile"~
-            if test : != "$BUENFEST_TOOL" && test -f "$lt_outputfile.buenfest"; then
-              $BUENFEST_TOOL -buenfest "$lt_tool_outputfile.buenfest" -outputresource:"$lt_tool_outputfile" || exit 1;
-              $RM "$lt_outputfile.buenfest";
+            if test : != "$MANIFEST_TOOL" && test -f "$lt_outputfile.manifest"; then
+              $MANIFEST_TOOL -manifest "$lt_tool_outputfile.manifest" -outputresource:"$lt_tool_outputfile" || exit 1;
+              $RM "$lt_outputfile.manifest";
             fi'
 	  ;;
 	*)

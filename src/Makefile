@@ -96,10 +96,10 @@ am__make_running_with_option = \
   test $$has_opt = yes
 am__make_dryrun = (target_option=n; $(am__make_running_with_option))
 am__make_keepgoing = (target_option=k; $(am__make_running_with_option))
-pkgdatadir = $(datadir)/Buenas
-pkgincludedir = $(includedir)/Buenas
-pkglibdir = $(libdir)/Buenas
-pkglibexecdir = $(libexecdir)/Buenas
+pkgdatadir = $(datadir)/Buenos
+pkgincludedir = $(includedir)/Buenos
+pkglibdir = $(libdir)/Buenos
+pkglibexecdir = $(libexecdir)/Buenos
 am__cd = CDPATH="$${ZSH_VERSION+.}$(PATH_SEPARATOR)" && cd
 install_sh_DATA = $(install_sh) -c -m 644
 install_sh_PROGRAM = $(install_sh) -c
@@ -118,12 +118,12 @@ bin_PROGRAMS = $(am__EXEEXT_1) $(am__EXEEXT_2) $(am__EXEEXT_3) \
 	$(am__EXEEXT_4) $(am__EXEEXT_5) $(am__EXEEXT_6)
 noinst_PROGRAMS = $(am__EXEEXT_7)
 TESTS = $(am__EXEEXT_3) $(am__EXEEXT_6)
-am__append_1 = Buenasd
-am__append_2 = Buenas-cli Buenas-tx
+am__append_1 = Buenosd
+am__append_2 = Buenos-cli Buenos-tx
 #am__append_3 = compat/glibc_compat.cpp
 #am__append_4 = bitcoind-res.rc
-#am__append_5 = Buenas-cli-res.rc
-#am__append_6 = Buenas-tx-res.rc
+#am__append_5 = Buenos-cli-res.rc
+#am__append_6 = Buenos-tx-res.rc
 #am__append_7 = compat/glibc_compat.cpp
 am__append_8 = $(LIBLEVELDB_INT) \
 	$(LIBMEMENV_INT)
@@ -210,7 +210,7 @@ am__append_26 = $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
 am__append_27 = bench/coin_selection.cpp
 am__append_28 = $(LIBBITCOIN_WALLET) $(LIBBITCOIN_CRYPTO)
 am__append_29 = $(CLEAN_BITCOIN_BENCH)
-am__append_30 = qt/Buenas-qt
+am__append_30 = qt/Buenos-qt
 am__append_31 = qt/libbitcoinqt.a
 #am__append_32 = $(BITCOIN_QT_WINDOWS_CPP)
 am__append_33 = $(BITCOIN_QT_WALLET_CPP)
@@ -654,8 +654,8 @@ am__qt_libbitcoinqt_a_SOURCES_DIST = qt/bantablemodel.cpp \
 	qt/locale/bitcoin_zh_TW.ts qt/paymentrequest.proto \
 	qt/res/icons/add.png qt/res/icons/address-book.png \
 	qt/res/icons/about.png qt/res/icons/about_qt.png \
-	qt/res/icons/Buenas.ico qt/res/icons/Buenas_testnet.ico \
-	qt/res/icons/Buenas.png qt/res/icons/chevron.png \
+	qt/res/icons/Buenos.ico qt/res/icons/Buenos_testnet.ico \
+	qt/res/icons/Buenos.png qt/res/icons/chevron.png \
 	qt/res/icons/clock1.png qt/res/icons/clock2.png \
 	qt/res/icons/clock3.png qt/res/icons/clock4.png \
 	qt/res/icons/clock5.png qt/res/icons/configure.png \
@@ -902,48 +902,48 @@ libbitcoinconsensus_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 	$(libbitcoinconsensus_la_LDFLAGS) $(LDFLAGS) -o $@
 am_libbitcoinconsensus_la_rpath = -rpath \
 	$(libdir)
-am__EXEEXT_1 = Buenasd$(EXEEXT)
-am__EXEEXT_2 = Buenas-cli$(EXEEXT) \
-	Buenas-tx$(EXEEXT)
+am__EXEEXT_1 = Buenosd$(EXEEXT)
+am__EXEEXT_2 = Buenos-cli$(EXEEXT) \
+	Buenos-tx$(EXEEXT)
 am__EXEEXT_3 = test/test_bitcoin$(EXEEXT)
 am__EXEEXT_4 = bench/bench_bitcoin$(EXEEXT)
-am__EXEEXT_5 = qt/Buenas-qt$(EXEEXT)
+am__EXEEXT_5 = qt/Buenos-qt$(EXEEXT)
 am__EXEEXT_6 = qt/test/test_bitcoin-qt$(EXEEXT)
 am__EXEEXT_7 = test/test_bitcoin_fuzzy$(EXEEXT)
 PROGRAMS = $(bin_PROGRAMS) $(noinst_PROGRAMS)
-am__Buenas_cli_SOURCES_DIST = Buenas-cli.cpp Buenas-cli-res.rc
-#am__objects_18 = Buenas-cli-res.$(OBJEXT)
-am_Buenas_cli_OBJECTS = Buenas_cli-Buenas-cli.$(OBJEXT) \
+am__Buenos_cli_SOURCES_DIST = Buenos-cli.cpp Buenos-cli-res.rc
+#am__objects_18 = Buenos-cli-res.$(OBJEXT)
+am_Buenos_cli_OBJECTS = Buenos_cli-Buenos-cli.$(OBJEXT) \
 	$(am__objects_18)
-Buenas_cli_OBJECTS = $(am_Buenas_cli_OBJECTS)
+Buenos_cli_OBJECTS = $(am_Buenos_cli_OBJECTS)
 am__DEPENDENCIES_1 =
 #am__DEPENDENCIES_2 = $(am__DEPENDENCIES_1)
 am__DEPENDENCIES_2 = univalue/libunivalue.la
-Buenas_cli_DEPENDENCIES = $(LIBBITCOIN_CLI) $(am__DEPENDENCIES_2) \
+Buenos_cli_DEPENDENCIES = $(LIBBITCOIN_CLI) $(am__DEPENDENCIES_2) \
 	$(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) $(am__DEPENDENCIES_1) \
 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
 	$(am__DEPENDENCIES_1)
-Buenas_cli_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
-	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(Buenas_cli_CXXFLAGS) \
-	$(CXXFLAGS) $(Buenas_cli_LDFLAGS) $(LDFLAGS) -o $@
-am__Buenas_tx_SOURCES_DIST = Buenas-tx.cpp Buenas-tx-res.rc
-#am__objects_19 = Buenas-tx-res.$(OBJEXT)
-am_Buenas_tx_OBJECTS = Buenas_tx-Buenas-tx.$(OBJEXT) $(am__objects_19)
-Buenas_tx_OBJECTS = $(am_Buenas_tx_OBJECTS)
-Buenas_tx_DEPENDENCIES = $(am__DEPENDENCIES_2) $(LIBBITCOIN_COMMON) \
+Buenos_cli_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
+	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(Buenos_cli_CXXFLAGS) \
+	$(CXXFLAGS) $(Buenos_cli_LDFLAGS) $(LDFLAGS) -o $@
+am__Buenos_tx_SOURCES_DIST = Buenos-tx.cpp Buenos-tx-res.rc
+#am__objects_19 = Buenos-tx-res.$(OBJEXT)
+am_Buenos_tx_OBJECTS = Buenos_tx-Buenos-tx.$(OBJEXT) $(am__objects_19)
+Buenos_tx_OBJECTS = $(am_Buenos_tx_OBJECTS)
+Buenos_tx_DEPENDENCIES = $(am__DEPENDENCIES_2) $(LIBBITCOIN_COMMON) \
 	$(LIBBITCOIN_UTIL) $(LIBBITCOIN_CONSENSUS) \
 	$(LIBBITCOIN_CRYPTO) $(LIBSECP256K1) $(am__DEPENDENCIES_1) \
 	$(am__DEPENDENCIES_1)
-Buenas_tx_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
-	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(Buenas_tx_CXXFLAGS) \
-	$(CXXFLAGS) $(Buenas_tx_LDFLAGS) $(LDFLAGS) -o $@
-am__Buenasd_SOURCES_DIST = Buenasd.cpp bitcoind-res.rc
+Buenos_tx_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
+	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(Buenos_tx_CXXFLAGS) \
+	$(CXXFLAGS) $(Buenos_tx_LDFLAGS) $(LDFLAGS) -o $@
+am__Buenosd_SOURCES_DIST = Buenosd.cpp bitcoind-res.rc
 #am__objects_20 = bitcoind-res.$(OBJEXT)
-am_Buenasd_OBJECTS = Buenasd-Buenasd.$(OBJEXT) $(am__objects_20)
-Buenasd_OBJECTS = $(am_Buenasd_OBJECTS)
+am_Buenosd_OBJECTS = Buenosd-Buenosd.$(OBJEXT) $(am__objects_20)
+Buenosd_OBJECTS = $(am_Buenosd_OBJECTS)
 am__DEPENDENCIES_3 = $(am__append_9)
 am__DEPENDENCIES_4 = $(am__append_10)
-Buenasd_DEPENDENCIES = $(LIBBITCOIN_SERVER) $(LIBBITCOIN_COMMON) \
+Buenosd_DEPENDENCIES = $(LIBBITCOIN_SERVER) $(LIBBITCOIN_COMMON) \
 	$(am__DEPENDENCIES_2) $(LIBBITCOIN_UTIL) $(LIBBITCOIN_WALLET) \
 	$(LIBBITCOIN_ZMQ) $(LIBBITCOIN_CONSENSUS) $(LIBBITCOIN_CRYPTO) \
 	$(am__DEPENDENCIES_3) $(am__DEPENDENCIES_4) $(LIBSECP256K1) \
@@ -951,9 +951,9 @@ Buenasd_DEPENDENCIES = $(LIBBITCOIN_SERVER) $(LIBBITCOIN_COMMON) \
 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
-Buenasd_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
-	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(Buenasd_CXXFLAGS) \
-	$(CXXFLAGS) $(Buenasd_LDFLAGS) $(LDFLAGS) -o $@
+Buenosd_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
+	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(Buenosd_CXXFLAGS) \
+	$(CXXFLAGS) $(Buenosd_LDFLAGS) $(LDFLAGS) -o $@
 am__bench_bench_bitcoin_SOURCES_DIST = bench/bench_bitcoin.cpp \
 	bench/bench.cpp bench/bench.h bench/checkblock.cpp \
 	bench/checkqueue.cpp bench/Examples.cpp bench/rollingbloom.cpp \
@@ -1001,25 +1001,25 @@ bench_bench_bitcoin_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CXXLD) \
 	$(bench_bench_bitcoin_CXXFLAGS) $(CXXFLAGS) \
 	$(bench_bench_bitcoin_LDFLAGS) $(LDFLAGS) -o $@
-am__qt_Buenas_qt_SOURCES_DIST = qt/bitcoin.cpp \
+am__qt_Buenos_qt_SOURCES_DIST = qt/bitcoin.cpp \
 	qt/macdockiconhandler.mm qt/macnotificationhandler.mm \
-	qt/res/Buenas-qt-res.rc
+	qt/res/Buenos-qt-res.rc
 am__objects_23 =  \
-	qt/qt_Buenas_qt-macdockiconhandler.$(OBJEXT) \
-	qt/qt_Buenas_qt-macnotificationhandler.$(OBJEXT)
+	qt/qt_Buenos_qt-macdockiconhandler.$(OBJEXT) \
+	qt/qt_Buenos_qt-macnotificationhandler.$(OBJEXT)
 #am__objects_24 =  \
 #	$(am__objects_23)
-am__objects_25 = qt/res/Buenas-qt-res.$(OBJEXT)
+am__objects_25 = qt/res/Buenos-qt-res.$(OBJEXT)
 #am__objects_26 =  \
 #	$(am__objects_25)
-am_qt_Buenas_qt_OBJECTS =  \
-	qt/qt_Buenas_qt-bitcoin.$(OBJEXT) \
+am_qt_Buenos_qt_OBJECTS =  \
+	qt/qt_Buenos_qt-bitcoin.$(OBJEXT) \
 	$(am__objects_24) $(am__objects_26)
-qt_Buenas_qt_OBJECTS = $(am_qt_Buenas_qt_OBJECTS)
+qt_Buenos_qt_OBJECTS = $(am_qt_Buenos_qt_OBJECTS)
 am__DEPENDENCIES_6 =  \
 	$(LIBBITCOIN_ZMQ) \
 	$(am__DEPENDENCIES_1)
-qt_Buenas_qt_DEPENDENCIES = qt/libbitcoinqt.a \
+qt_Buenos_qt_DEPENDENCIES = qt/libbitcoinqt.a \
 	$(LIBBITCOIN_SERVER) $(am__append_36) \
 	$(am__DEPENDENCIES_6) $(LIBBITCOIN_CLI) \
 	$(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) \
@@ -1032,9 +1032,9 @@ qt_Buenas_qt_DEPENDENCIES = qt/libbitcoinqt.a \
 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
 	$(LIBSECP256K1) $(am__DEPENDENCIES_1) \
 	$(am__DEPENDENCIES_1)
-qt_Buenas_qt_LINK = $(LIBTOOL) $(AM_V_lt) $(qt_Buenas_qt_LIBTOOLFLAGS) \
+qt_Buenos_qt_LINK = $(LIBTOOL) $(AM_V_lt) $(qt_Buenos_qt_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(OBJCXXLD) $(AM_OBJCXXFLAGS) \
-	$(OBJCXXFLAGS) $(qt_Buenas_qt_LDFLAGS) $(LDFLAGS) -o $@
+	$(OBJCXXFLAGS) $(qt_Buenos_qt_LDFLAGS) $(LDFLAGS) -o $@
 am__qt_test_test_bitcoin_qt_SOURCES_DIST = qt/test/compattests.cpp \
 	qt/test/rpcnestedtests.cpp qt/test/test_main.cpp \
 	qt/test/uritests.cpp qt/test/compattests.h \
@@ -1300,10 +1300,10 @@ SOURCES = $(crypto_libbitcoin_crypto_a_SOURCES) \
 	$(libbitcoin_wallet_a_SOURCES) $(libbitcoin_zmq_a_SOURCES) \
 	$(qt_libbitcoinqt_a_SOURCES) \
 	$(nodist_qt_libbitcoinqt_a_SOURCES) \
-	$(libbitcoinconsensus_la_SOURCES) $(Buenas_cli_SOURCES) \
-	$(Buenas_tx_SOURCES) $(Buenasd_SOURCES) \
+	$(libbitcoinconsensus_la_SOURCES) $(Buenos_cli_SOURCES) \
+	$(Buenos_tx_SOURCES) $(Buenosd_SOURCES) \
 	$(bench_bench_bitcoin_SOURCES) \
-	$(nodist_bench_bench_bitcoin_SOURCES) $(qt_Buenas_qt_SOURCES) \
+	$(nodist_bench_bench_bitcoin_SOURCES) $(qt_Buenos_qt_SOURCES) \
 	$(qt_test_test_bitcoin_qt_SOURCES) \
 	$(nodist_qt_test_test_bitcoin_qt_SOURCES) \
 	$(test_test_bitcoin_SOURCES) \
@@ -1320,10 +1320,10 @@ DIST_SOURCES = $(crypto_libbitcoin_crypto_a_SOURCES) \
 	$(am__libbitcoin_zmq_a_SOURCES_DIST) \
 	$(am__qt_libbitcoinqt_a_SOURCES_DIST) \
 	$(am__libbitcoinconsensus_la_SOURCES_DIST) \
-	$(am__Buenas_cli_SOURCES_DIST) $(am__Buenas_tx_SOURCES_DIST) \
-	$(am__Buenasd_SOURCES_DIST) \
+	$(am__Buenos_cli_SOURCES_DIST) $(am__Buenos_tx_SOURCES_DIST) \
+	$(am__Buenosd_SOURCES_DIST) \
 	$(am__bench_bench_bitcoin_SOURCES_DIST) \
-	$(am__qt_Buenas_qt_SOURCES_DIST) \
+	$(am__qt_Buenos_qt_SOURCES_DIST) \
 	$(am__qt_test_test_bitcoin_qt_SOURCES_DIST) \
 	$(am__test_test_bitcoin_SOURCES_DIST) \
 	$(am__test_test_bitcoin_fuzzy_SOURCES_DIST)
@@ -1578,21 +1578,21 @@ am__relativize = \
     dir1=`echo "$$dir1" | sed -e "$$sed_rest"`; \
   done; \
   reldir="$$dir2"
-ACLOCAL = ${SHELL} /home/o/Buenas/build-aux/missing aclocal-1.15
+ACLOCAL = ${SHELL} /home/o/Buenos/build-aux/missing aclocal-1.15
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 0
 AR = /usr/bin/ar
-AUTOCONF = ${SHELL} /home/o/Buenas/build-aux/missing autoconf
-AUTOHEADER = ${SHELL} /home/o/Buenas/build-aux/missing autoheader
-AUTOMAKE = ${SHELL} /home/o/Buenas/build-aux/missing automake-1.15
+AUTOCONF = ${SHELL} /home/o/Buenos/build-aux/missing autoconf
+AUTOHEADER = ${SHELL} /home/o/Buenos/build-aux/missing autoheader
+AUTOMAKE = ${SHELL} /home/o/Buenos/build-aux/missing automake-1.15
 AWK = mawk
 BDB_CFLAGS = 
 BDB_CPPFLAGS = 
 BDB_LIBS = -ldb_cxx-4.8
-BITCOIN_CLI_NAME = Buenas-cli
-BITCOIN_DAEMON_NAME = Buenasd
-BITCOIN_GUI_NAME = Buenas-qt
-BITCOIN_TX_NAME = Buenas-tx
+BITCOIN_CLI_NAME = Buenos-cli
+BITCOIN_DAEMON_NAME = Buenosd
+BITCOIN_GUI_NAME = Buenos-qt
+BITCOIN_TX_NAME = Buenos-tx
 BOOST_CHRONO_LIB = -lboost_chrono
 BOOST_CPPFLAGS = -pthread -I/usr/include
 BOOST_FILESYSTEM_LIB = -lboost_filesystem
@@ -1613,8 +1613,8 @@ CLIENT_VERSION_MAJOR = 0
 CLIENT_VERSION_MINOR = 1
 CLIENT_VERSION_REVISION = 1
 COPYRIGHT_HOLDERS = The %s developers
-COPYRIGHT_HOLDERS_FINAL = The Buenas developers
-COPYRIGHT_HOLDERS_SUBSTITUTION = Buenas
+COPYRIGHT_HOLDERS_FINAL = The Buenos developers
+COPYRIGHT_HOLDERS_SUBSTITUTION = Buenos
 COPYRIGHT_YEAR = 2017
 CPP = gcc -E
 CPPFILT = /usr/bin/c++filt
@@ -1678,9 +1678,9 @@ LTLIBOBJS =
 LT_SYS_LIBRARY_PATH = 
 LUPDATE = /usr/lib/x86_64-linux-gnu/qt5/bin/lupdate
 MAINT = 
-MAKEINFO = ${SHELL} /home/o/Buenas/build-aux/missing makeinfo
+MAKEINFO = ${SHELL} /home/o/Buenos/build-aux/missing makeinfo
 MAKENSIS = 
-BUENFEST_TOOL = :
+MANIFEST_TOOL = :
 MINIUPNPC_CPPFLAGS = 
 MINIUPNPC_LIBS = -lminiupnpc
 MKDIR_P = /bin/mkdir -p
@@ -1696,12 +1696,12 @@ OBJDUMP = objdump
 OBJEXT = o
 OTOOL = 
 OTOOL64 = 
-PACKAGE = Buenas
+PACKAGE = Buenos
 PACKAGE_BUGREPORT = https://github.com/bitcoin/bitcoin/issues
-PACKAGE_NAME = Buenas
-PACKAGE_STRING = Buenas 0.1.1
-PACKAGE_TARNAME = Buenas
-PACKAGE_URL = https://Buenas.org/
+PACKAGE_NAME = Buenos
+PACKAGE_STRING = Buenos 0.1.1
+PACKAGE_TARNAME = Buenos
+PACKAGE_URL = https://Buenos.org/
 PACKAGE_VERSION = 0.1.1
 PATH_SEPARATOR = :
 PIC_FLAGS = -fPIC
@@ -1765,10 +1765,10 @@ X11XCB_LIBS =
 XGETTEXT = /usr/bin/xgettext
 ZMQ_CFLAGS = 
 ZMQ_LIBS = -lzmq
-abs_builddir = /home/o/Buenas/src
-abs_srcdir = /home/o/Buenas/src
-abs_top_builddir = /home/o/Buenas
-abs_top_srcdir = /home/o/Buenas
+abs_builddir = /home/o/Buenos/src
+abs_srcdir = /home/o/Buenos/src
+abs_top_builddir = /home/o/Buenos
+abs_top_srcdir = /home/o/Buenos
 ac_ct_AR = ar
 ac_ct_CC = gcc
 ac_ct_CXX = g++
@@ -1800,7 +1800,7 @@ host_vendor = pc
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/o/Buenas/build-aux/install-sh
+install_sh = ${SHELL} /home/o/Buenos/build-aux/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -2119,7 +2119,7 @@ libbitcoin_util_a_SOURCES = support/lockedpool.cpp chainparamsbase.cpp \
 	utilstrencodings.cpp utiltime.cpp $(BITCOIN_CORE_H) \
 	$(am__append_3)
 
-# cli: shared between Buenas and bitcoin-qt
+# cli: shared between Buenos and bitcoin-qt
 libbitcoin_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_cli_a_SOURCES = \
@@ -2129,34 +2129,34 @@ libbitcoin_cli_a_SOURCES = \
 nodist_libbitcoin_util_a_SOURCES = $(srcdir)/obj/build.h
 #
 
-# Buenasd binary #
-Buenasd_SOURCES = Buenasd.cpp $(am__append_4)
-Buenasd_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-Buenasd_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-Buenasd_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
-Buenasd_LDADD = $(LIBBITCOIN_SERVER) $(LIBBITCOIN_COMMON) \
+# Buenosd binary #
+Buenosd_SOURCES = Buenosd.cpp $(am__append_4)
+Buenosd_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+Buenosd_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+Buenosd_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+Buenosd_LDADD = $(LIBBITCOIN_SERVER) $(LIBBITCOIN_COMMON) \
 	$(LIBUNIVALUE) $(LIBBITCOIN_UTIL) $(LIBBITCOIN_WALLET) \
 	$(LIBBITCOIN_ZMQ) $(LIBBITCOIN_CONSENSUS) $(LIBBITCOIN_CRYPTO) \
 	$(LIBLEVELDB) $(LIBMEMENV) $(LIBSECP256K1) $(BOOST_LIBS) \
 	$(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) \
 	$(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
 
-# Buenas binary #
-Buenas_cli_SOURCES = Buenas-cli.cpp $(am__append_5)
-Buenas_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
-Buenas_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-Buenas_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
-Buenas_cli_LDADD = $(LIBBITCOIN_CLI) $(LIBUNIVALUE) $(LIBBITCOIN_UTIL) \
+# Buenos binary #
+Buenos_cli_SOURCES = Buenos-cli.cpp $(am__append_5)
+Buenos_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
+Buenos_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+Buenos_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+Buenos_cli_LDADD = $(LIBBITCOIN_CLI) $(LIBUNIVALUE) $(LIBBITCOIN_UTIL) \
 	$(LIBBITCOIN_CRYPTO) $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) \
 	$(EVENT_LIBS)
 #
 
-# Buenas-tx binary #
-Buenas_tx_SOURCES = Buenas-tx.cpp $(am__append_6)
-Buenas_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-Buenas_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-Buenas_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
-Buenas_tx_LDADD = $(LIBUNIVALUE) $(LIBBITCOIN_COMMON) \
+# Buenos-tx binary #
+Buenos_tx_SOURCES = Buenos-tx.cpp $(am__append_6)
+Buenos_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+Buenos_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+Buenos_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+Buenos_tx_LDADD = $(LIBUNIVALUE) $(LIBBITCOIN_COMMON) \
 	$(LIBBITCOIN_UTIL) $(LIBBITCOIN_CONSENSUS) \
 	$(LIBBITCOIN_CRYPTO) $(LIBSECP256K1) $(BOOST_LIBS) \
 	$(CRYPTO_LIBS)
@@ -2644,9 +2644,9 @@ RES_ICONS = \
   qt/res/icons/address-book.png \
   qt/res/icons/about.png \
   qt/res/icons/about_qt.png \
-  qt/res/icons/Buenas.ico \
-  qt/res/icons/Buenas_testnet.ico \
-  qt/res/icons/Buenas.png \
+  qt/res/icons/Buenos.ico \
+  qt/res/icons/Buenos_testnet.ico \
+  qt/res/icons/Buenos.png \
   qt/res/icons/chevron.png \
   qt/res/icons/clock1.png \
   qt/res/icons/clock2.png \
@@ -2753,7 +2753,7 @@ BITCOIN_QT_CPP = $(BITCOIN_QT_BASE_CPP) \
 	$(am__append_32) $(am__append_33)
 RES_IMAGES = 
 RES_MOVIES = $(wildcard $(srcdir)/qt/res/movies/spinner-*.png)
-BITCOIN_RC = qt/res/Buenas-qt-res.rc
+BITCOIN_RC = qt/res/Buenos-qt-res.rc
 BITCOIN_QT_INCLUDES = -I$(builddir)/qt -I$(srcdir)/qt -I$(srcdir)/qt/forms \
   -I$(builddir)/qt/forms -DQT_NO_KEYWORDS
 
@@ -2771,14 +2771,14 @@ nodist_qt_libbitcoinqt_a_SOURCES = $(QT_MOC_CPP) $(QT_MOC) $(PROTOBUF_CC) \
 # forms/foo.h -> forms/ui_foo.h
 QT_FORMS_H = $(join $(dir $(QT_FORMS_UI)),$(addprefix ui_, $(notdir $(QT_FORMS_UI:.ui=.h))))
 
-# Buenas-qt binary #
-qt_Buenas_qt_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
+# Buenos-qt binary #
+qt_Buenos_qt_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
   $(QT_INCLUDES) $(PROTOBUF_CFLAGS) $(QR_CFLAGS)
 
-qt_Buenas_qt_CXXFLAGS = $(AM_CXXFLAGS) $(QT_PIE_FLAGS)
-qt_Buenas_qt_SOURCES = qt/bitcoin.cpp $(am__append_34) \
+qt_Buenos_qt_CXXFLAGS = $(AM_CXXFLAGS) $(QT_PIE_FLAGS)
+qt_Buenos_qt_SOURCES = qt/bitcoin.cpp $(am__append_34) \
 	$(am__append_35)
-qt_Buenas_qt_LDADD = qt/libbitcoinqt.a \
+qt_Buenos_qt_LDADD = qt/libbitcoinqt.a \
 	$(LIBBITCOIN_SERVER) $(am__append_36) \
 	$(am__append_37) $(LIBBITCOIN_CLI) \
 	$(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) \
@@ -2789,8 +2789,8 @@ qt_Buenas_qt_LDADD = qt/libbitcoinqt.a \
 	$(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) \
 	$(LIBSECP256K1) $(EVENT_PTHREADS_LIBS) \
 	$(EVENT_LIBS)
-qt_Buenas_qt_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
-qt_Buenas_qt_LIBTOOLFLAGS = --tag CXX
+qt_Buenos_qt_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+qt_Buenos_qt_LIBTOOLFLAGS = --tag CXX
 
 #locale/foo.ts -> locale/foo.qm
 QT_QM = $(QT_TS:.ts=.qm)
@@ -3636,17 +3636,17 @@ clean-noinstPROGRAMS:
 	echo " rm -f" $$list; \
 	rm -f $$list
 
-Buenas-cli$(EXEEXT): $(Buenas_cli_OBJECTS) $(Buenas_cli_DEPENDENCIES) $(EXTRA_Buenas_cli_DEPENDENCIES) 
-	@rm -f Buenas-cli$(EXEEXT)
-	$(AM_V_CXXLD)$(Buenas_cli_LINK) $(Buenas_cli_OBJECTS) $(Buenas_cli_LDADD) $(LIBS)
+Buenos-cli$(EXEEXT): $(Buenos_cli_OBJECTS) $(Buenos_cli_DEPENDENCIES) $(EXTRA_Buenos_cli_DEPENDENCIES) 
+	@rm -f Buenos-cli$(EXEEXT)
+	$(AM_V_CXXLD)$(Buenos_cli_LINK) $(Buenos_cli_OBJECTS) $(Buenos_cli_LDADD) $(LIBS)
 
-Buenas-tx$(EXEEXT): $(Buenas_tx_OBJECTS) $(Buenas_tx_DEPENDENCIES) $(EXTRA_Buenas_tx_DEPENDENCIES) 
-	@rm -f Buenas-tx$(EXEEXT)
-	$(AM_V_CXXLD)$(Buenas_tx_LINK) $(Buenas_tx_OBJECTS) $(Buenas_tx_LDADD) $(LIBS)
+Buenos-tx$(EXEEXT): $(Buenos_tx_OBJECTS) $(Buenos_tx_DEPENDENCIES) $(EXTRA_Buenos_tx_DEPENDENCIES) 
+	@rm -f Buenos-tx$(EXEEXT)
+	$(AM_V_CXXLD)$(Buenos_tx_LINK) $(Buenos_tx_OBJECTS) $(Buenos_tx_LDADD) $(LIBS)
 
-Buenasd$(EXEEXT): $(Buenasd_OBJECTS) $(Buenasd_DEPENDENCIES) $(EXTRA_Buenasd_DEPENDENCIES) 
-	@rm -f Buenasd$(EXEEXT)
-	$(AM_V_CXXLD)$(Buenasd_LINK) $(Buenasd_OBJECTS) $(Buenasd_LDADD) $(LIBS)
+Buenosd$(EXEEXT): $(Buenosd_OBJECTS) $(Buenosd_DEPENDENCIES) $(EXTRA_Buenosd_DEPENDENCIES) 
+	@rm -f Buenosd$(EXEEXT)
+	$(AM_V_CXXLD)$(Buenosd_LINK) $(Buenosd_OBJECTS) $(Buenosd_LDADD) $(LIBS)
 bench/$(am__dirstamp):
 	@$(MKDIR_P) bench
 	@: > bench/$(am__dirstamp)
@@ -3685,11 +3685,11 @@ bench/bench_bench_bitcoin-coin_selection.$(OBJEXT):  \
 bench/bench_bitcoin$(EXEEXT): $(bench_bench_bitcoin_OBJECTS) $(bench_bench_bitcoin_DEPENDENCIES) $(EXTRA_bench_bench_bitcoin_DEPENDENCIES) bench/$(am__dirstamp)
 	@rm -f bench/bench_bitcoin$(EXEEXT)
 	$(AM_V_CXXLD)$(bench_bench_bitcoin_LINK) $(bench_bench_bitcoin_OBJECTS) $(bench_bench_bitcoin_LDADD) $(LIBS)
-qt/qt_Buenas_qt-bitcoin.$(OBJEXT): qt/$(am__dirstamp) \
+qt/qt_Buenos_qt-bitcoin.$(OBJEXT): qt/$(am__dirstamp) \
 	qt/$(DEPDIR)/$(am__dirstamp)
-qt/qt_Buenas_qt-macdockiconhandler.$(OBJEXT): qt/$(am__dirstamp) \
+qt/qt_Buenos_qt-macdockiconhandler.$(OBJEXT): qt/$(am__dirstamp) \
 	qt/$(DEPDIR)/$(am__dirstamp)
-qt/qt_Buenas_qt-macnotificationhandler.$(OBJEXT): qt/$(am__dirstamp) \
+qt/qt_Buenos_qt-macnotificationhandler.$(OBJEXT): qt/$(am__dirstamp) \
 	qt/$(DEPDIR)/$(am__dirstamp)
 qt/res/$(am__dirstamp):
 	@$(MKDIR_P) qt/res
@@ -3697,12 +3697,12 @@ qt/res/$(am__dirstamp):
 qt/res/$(DEPDIR)/$(am__dirstamp):
 	@$(MKDIR_P) qt/res/$(DEPDIR)
 	@: > qt/res/$(DEPDIR)/$(am__dirstamp)
-qt/res/Buenas-qt-res.$(OBJEXT): qt/res/$(am__dirstamp) \
+qt/res/Buenos-qt-res.$(OBJEXT): qt/res/$(am__dirstamp) \
 	qt/res/$(DEPDIR)/$(am__dirstamp)
 
-qt/Buenas-qt$(EXEEXT): $(qt_Buenas_qt_OBJECTS) $(qt_Buenas_qt_DEPENDENCIES) $(EXTRA_qt_Buenas_qt_DEPENDENCIES) qt/$(am__dirstamp)
-	@rm -f qt/Buenas-qt$(EXEEXT)
-	$(AM_V_OBJCXXLD)$(qt_Buenas_qt_LINK) $(qt_Buenas_qt_OBJECTS) $(qt_Buenas_qt_LDADD) $(LIBS)
+qt/Buenos-qt$(EXEEXT): $(qt_Buenos_qt_OBJECTS) $(qt_Buenos_qt_DEPENDENCIES) $(EXTRA_qt_Buenos_qt_DEPENDENCIES) qt/$(am__dirstamp)
+	@rm -f qt/Buenos-qt$(EXEEXT)
+	$(AM_V_OBJCXXLD)$(qt_Buenos_qt_LINK) $(qt_Buenos_qt_OBJECTS) $(qt_Buenos_qt_LDADD) $(LIBS)
 qt/test/$(am__dirstamp):
 	@$(MKDIR_P) qt/test
 	@: > qt/test/$(am__dirstamp)
@@ -3908,9 +3908,9 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
-include ./$(DEPDIR)/Buenas_cli-Buenas-cli.Po
-include ./$(DEPDIR)/Buenas_tx-Buenas-tx.Po
-include ./$(DEPDIR)/Buenasd-Buenasd.Po
+include ./$(DEPDIR)/Buenos_cli-Buenos-cli.Po
+include ./$(DEPDIR)/Buenos_tx-Buenos-tx.Po
+include ./$(DEPDIR)/Buenosd-Buenosd.Po
 include ./$(DEPDIR)/libbitcoin_common_a-amount.Po
 include ./$(DEPDIR)/libbitcoin_common_a-base58.Po
 include ./$(DEPDIR)/libbitcoin_common_a-chainparams.Po
@@ -4089,9 +4089,9 @@ include primitives/$(DEPDIR)/libbitcoin_consensus_a-block.Po
 include primitives/$(DEPDIR)/libbitcoin_consensus_a-transaction.Po
 include primitives/$(DEPDIR)/libbitcoinconsensus_la-block.Plo
 include primitives/$(DEPDIR)/libbitcoinconsensus_la-transaction.Plo
-include qt/$(DEPDIR)/qt_Buenas_qt-bitcoin.Po
-include qt/$(DEPDIR)/qt_Buenas_qt-macdockiconhandler.Po
-include qt/$(DEPDIR)/qt_Buenas_qt-macnotificationhandler.Po
+include qt/$(DEPDIR)/qt_Buenos_qt-bitcoin.Po
+include qt/$(DEPDIR)/qt_Buenos_qt-macdockiconhandler.Po
+include qt/$(DEPDIR)/qt_Buenos_qt-macnotificationhandler.Po
 include qt/$(DEPDIR)/qt_libbitcoinqt_a-addressbookpage.Po
 include qt/$(DEPDIR)/qt_libbitcoinqt_a-addresstablemodel.Po
 include qt/$(DEPDIR)/qt_libbitcoinqt_a-askpassphrasedialog.Po
@@ -8159,47 +8159,47 @@ compat/libbitcoinconsensus_la-glibc_compat.lo: compat/glibc_compat.cpp
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
 #	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libbitcoinconsensus_la_CPPFLAGS) $(CPPFLAGS) $(libbitcoinconsensus_la_CXXFLAGS) $(CXXFLAGS) -c -o compat/libbitcoinconsensus_la-glibc_compat.lo `test -f 'compat/glibc_compat.cpp' || echo '$(srcdir)/'`compat/glibc_compat.cpp
 
-Buenas_cli-Buenas-cli.o: Buenas-cli.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(Buenas_cli_CPPFLAGS) $(CPPFLAGS) $(Buenas_cli_CXXFLAGS) $(CXXFLAGS) -MT Buenas_cli-Buenas-cli.o -MD -MP -MF $(DEPDIR)/Buenas_cli-Buenas-cli.Tpo -c -o Buenas_cli-Buenas-cli.o `test -f 'Buenas-cli.cpp' || echo '$(srcdir)/'`Buenas-cli.cpp
-	$(AM_V_at)$(am__mv) $(DEPDIR)/Buenas_cli-Buenas-cli.Tpo $(DEPDIR)/Buenas_cli-Buenas-cli.Po
-#	$(AM_V_CXX)source='Buenas-cli.cpp' object='Buenas_cli-Buenas-cli.o' libtool=no \
+Buenos_cli-Buenos-cli.o: Buenos-cli.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(Buenos_cli_CPPFLAGS) $(CPPFLAGS) $(Buenos_cli_CXXFLAGS) $(CXXFLAGS) -MT Buenos_cli-Buenos-cli.o -MD -MP -MF $(DEPDIR)/Buenos_cli-Buenos-cli.Tpo -c -o Buenos_cli-Buenos-cli.o `test -f 'Buenos-cli.cpp' || echo '$(srcdir)/'`Buenos-cli.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/Buenos_cli-Buenos-cli.Tpo $(DEPDIR)/Buenos_cli-Buenos-cli.Po
+#	$(AM_V_CXX)source='Buenos-cli.cpp' object='Buenos_cli-Buenos-cli.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(Buenas_cli_CPPFLAGS) $(CPPFLAGS) $(Buenas_cli_CXXFLAGS) $(CXXFLAGS) -c -o Buenas_cli-Buenas-cli.o `test -f 'Buenas-cli.cpp' || echo '$(srcdir)/'`Buenas-cli.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(Buenos_cli_CPPFLAGS) $(CPPFLAGS) $(Buenos_cli_CXXFLAGS) $(CXXFLAGS) -c -o Buenos_cli-Buenos-cli.o `test -f 'Buenos-cli.cpp' || echo '$(srcdir)/'`Buenos-cli.cpp
 
-Buenas_cli-Buenas-cli.obj: Buenas-cli.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(Buenas_cli_CPPFLAGS) $(CPPFLAGS) $(Buenas_cli_CXXFLAGS) $(CXXFLAGS) -MT Buenas_cli-Buenas-cli.obj -MD -MP -MF $(DEPDIR)/Buenas_cli-Buenas-cli.Tpo -c -o Buenas_cli-Buenas-cli.obj `if test -f 'Buenas-cli.cpp'; then $(CYGPATH_W) 'Buenas-cli.cpp'; else $(CYGPATH_W) '$(srcdir)/Buenas-cli.cpp'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/Buenas_cli-Buenas-cli.Tpo $(DEPDIR)/Buenas_cli-Buenas-cli.Po
-#	$(AM_V_CXX)source='Buenas-cli.cpp' object='Buenas_cli-Buenas-cli.obj' libtool=no \
+Buenos_cli-Buenos-cli.obj: Buenos-cli.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(Buenos_cli_CPPFLAGS) $(CPPFLAGS) $(Buenos_cli_CXXFLAGS) $(CXXFLAGS) -MT Buenos_cli-Buenos-cli.obj -MD -MP -MF $(DEPDIR)/Buenos_cli-Buenos-cli.Tpo -c -o Buenos_cli-Buenos-cli.obj `if test -f 'Buenos-cli.cpp'; then $(CYGPATH_W) 'Buenos-cli.cpp'; else $(CYGPATH_W) '$(srcdir)/Buenos-cli.cpp'; fi`
+	$(AM_V_at)$(am__mv) $(DEPDIR)/Buenos_cli-Buenos-cli.Tpo $(DEPDIR)/Buenos_cli-Buenos-cli.Po
+#	$(AM_V_CXX)source='Buenos-cli.cpp' object='Buenos_cli-Buenos-cli.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(Buenas_cli_CPPFLAGS) $(CPPFLAGS) $(Buenas_cli_CXXFLAGS) $(CXXFLAGS) -c -o Buenas_cli-Buenas-cli.obj `if test -f 'Buenas-cli.cpp'; then $(CYGPATH_W) 'Buenas-cli.cpp'; else $(CYGPATH_W) '$(srcdir)/Buenas-cli.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(Buenos_cli_CPPFLAGS) $(CPPFLAGS) $(Buenos_cli_CXXFLAGS) $(CXXFLAGS) -c -o Buenos_cli-Buenos-cli.obj `if test -f 'Buenos-cli.cpp'; then $(CYGPATH_W) 'Buenos-cli.cpp'; else $(CYGPATH_W) '$(srcdir)/Buenos-cli.cpp'; fi`
 
-Buenas_tx-Buenas-tx.o: Buenas-tx.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(Buenas_tx_CPPFLAGS) $(CPPFLAGS) $(Buenas_tx_CXXFLAGS) $(CXXFLAGS) -MT Buenas_tx-Buenas-tx.o -MD -MP -MF $(DEPDIR)/Buenas_tx-Buenas-tx.Tpo -c -o Buenas_tx-Buenas-tx.o `test -f 'Buenas-tx.cpp' || echo '$(srcdir)/'`Buenas-tx.cpp
-	$(AM_V_at)$(am__mv) $(DEPDIR)/Buenas_tx-Buenas-tx.Tpo $(DEPDIR)/Buenas_tx-Buenas-tx.Po
-#	$(AM_V_CXX)source='Buenas-tx.cpp' object='Buenas_tx-Buenas-tx.o' libtool=no \
+Buenos_tx-Buenos-tx.o: Buenos-tx.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(Buenos_tx_CPPFLAGS) $(CPPFLAGS) $(Buenos_tx_CXXFLAGS) $(CXXFLAGS) -MT Buenos_tx-Buenos-tx.o -MD -MP -MF $(DEPDIR)/Buenos_tx-Buenos-tx.Tpo -c -o Buenos_tx-Buenos-tx.o `test -f 'Buenos-tx.cpp' || echo '$(srcdir)/'`Buenos-tx.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/Buenos_tx-Buenos-tx.Tpo $(DEPDIR)/Buenos_tx-Buenos-tx.Po
+#	$(AM_V_CXX)source='Buenos-tx.cpp' object='Buenos_tx-Buenos-tx.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(Buenas_tx_CPPFLAGS) $(CPPFLAGS) $(Buenas_tx_CXXFLAGS) $(CXXFLAGS) -c -o Buenas_tx-Buenas-tx.o `test -f 'Buenas-tx.cpp' || echo '$(srcdir)/'`Buenas-tx.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(Buenos_tx_CPPFLAGS) $(CPPFLAGS) $(Buenos_tx_CXXFLAGS) $(CXXFLAGS) -c -o Buenos_tx-Buenos-tx.o `test -f 'Buenos-tx.cpp' || echo '$(srcdir)/'`Buenos-tx.cpp
 
-Buenas_tx-Buenas-tx.obj: Buenas-tx.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(Buenas_tx_CPPFLAGS) $(CPPFLAGS) $(Buenas_tx_CXXFLAGS) $(CXXFLAGS) -MT Buenas_tx-Buenas-tx.obj -MD -MP -MF $(DEPDIR)/Buenas_tx-Buenas-tx.Tpo -c -o Buenas_tx-Buenas-tx.obj `if test -f 'Buenas-tx.cpp'; then $(CYGPATH_W) 'Buenas-tx.cpp'; else $(CYGPATH_W) '$(srcdir)/Buenas-tx.cpp'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/Buenas_tx-Buenas-tx.Tpo $(DEPDIR)/Buenas_tx-Buenas-tx.Po
-#	$(AM_V_CXX)source='Buenas-tx.cpp' object='Buenas_tx-Buenas-tx.obj' libtool=no \
+Buenos_tx-Buenos-tx.obj: Buenos-tx.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(Buenos_tx_CPPFLAGS) $(CPPFLAGS) $(Buenos_tx_CXXFLAGS) $(CXXFLAGS) -MT Buenos_tx-Buenos-tx.obj -MD -MP -MF $(DEPDIR)/Buenos_tx-Buenos-tx.Tpo -c -o Buenos_tx-Buenos-tx.obj `if test -f 'Buenos-tx.cpp'; then $(CYGPATH_W) 'Buenos-tx.cpp'; else $(CYGPATH_W) '$(srcdir)/Buenos-tx.cpp'; fi`
+	$(AM_V_at)$(am__mv) $(DEPDIR)/Buenos_tx-Buenos-tx.Tpo $(DEPDIR)/Buenos_tx-Buenos-tx.Po
+#	$(AM_V_CXX)source='Buenos-tx.cpp' object='Buenos_tx-Buenos-tx.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(Buenas_tx_CPPFLAGS) $(CPPFLAGS) $(Buenas_tx_CXXFLAGS) $(CXXFLAGS) -c -o Buenas_tx-Buenas-tx.obj `if test -f 'Buenas-tx.cpp'; then $(CYGPATH_W) 'Buenas-tx.cpp'; else $(CYGPATH_W) '$(srcdir)/Buenas-tx.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(Buenos_tx_CPPFLAGS) $(CPPFLAGS) $(Buenos_tx_CXXFLAGS) $(CXXFLAGS) -c -o Buenos_tx-Buenos-tx.obj `if test -f 'Buenos-tx.cpp'; then $(CYGPATH_W) 'Buenos-tx.cpp'; else $(CYGPATH_W) '$(srcdir)/Buenos-tx.cpp'; fi`
 
-Buenasd-Buenasd.o: Buenasd.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(Buenasd_CPPFLAGS) $(CPPFLAGS) $(Buenasd_CXXFLAGS) $(CXXFLAGS) -MT Buenasd-Buenasd.o -MD -MP -MF $(DEPDIR)/Buenasd-Buenasd.Tpo -c -o Buenasd-Buenasd.o `test -f 'Buenasd.cpp' || echo '$(srcdir)/'`Buenasd.cpp
-	$(AM_V_at)$(am__mv) $(DEPDIR)/Buenasd-Buenasd.Tpo $(DEPDIR)/Buenasd-Buenasd.Po
-#	$(AM_V_CXX)source='Buenasd.cpp' object='Buenasd-Buenasd.o' libtool=no \
+Buenosd-Buenosd.o: Buenosd.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(Buenosd_CPPFLAGS) $(CPPFLAGS) $(Buenosd_CXXFLAGS) $(CXXFLAGS) -MT Buenosd-Buenosd.o -MD -MP -MF $(DEPDIR)/Buenosd-Buenosd.Tpo -c -o Buenosd-Buenosd.o `test -f 'Buenosd.cpp' || echo '$(srcdir)/'`Buenosd.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/Buenosd-Buenosd.Tpo $(DEPDIR)/Buenosd-Buenosd.Po
+#	$(AM_V_CXX)source='Buenosd.cpp' object='Buenosd-Buenosd.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(Buenasd_CPPFLAGS) $(CPPFLAGS) $(Buenasd_CXXFLAGS) $(CXXFLAGS) -c -o Buenasd-Buenasd.o `test -f 'Buenasd.cpp' || echo '$(srcdir)/'`Buenasd.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(Buenosd_CPPFLAGS) $(CPPFLAGS) $(Buenosd_CXXFLAGS) $(CXXFLAGS) -c -o Buenosd-Buenosd.o `test -f 'Buenosd.cpp' || echo '$(srcdir)/'`Buenosd.cpp
 
-Buenasd-Buenasd.obj: Buenasd.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(Buenasd_CPPFLAGS) $(CPPFLAGS) $(Buenasd_CXXFLAGS) $(CXXFLAGS) -MT Buenasd-Buenasd.obj -MD -MP -MF $(DEPDIR)/Buenasd-Buenasd.Tpo -c -o Buenasd-Buenasd.obj `if test -f 'Buenasd.cpp'; then $(CYGPATH_W) 'Buenasd.cpp'; else $(CYGPATH_W) '$(srcdir)/Buenasd.cpp'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/Buenasd-Buenasd.Tpo $(DEPDIR)/Buenasd-Buenasd.Po
-#	$(AM_V_CXX)source='Buenasd.cpp' object='Buenasd-Buenasd.obj' libtool=no \
+Buenosd-Buenosd.obj: Buenosd.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(Buenosd_CPPFLAGS) $(CPPFLAGS) $(Buenosd_CXXFLAGS) $(CXXFLAGS) -MT Buenosd-Buenosd.obj -MD -MP -MF $(DEPDIR)/Buenosd-Buenosd.Tpo -c -o Buenosd-Buenosd.obj `if test -f 'Buenosd.cpp'; then $(CYGPATH_W) 'Buenosd.cpp'; else $(CYGPATH_W) '$(srcdir)/Buenosd.cpp'; fi`
+	$(AM_V_at)$(am__mv) $(DEPDIR)/Buenosd-Buenosd.Tpo $(DEPDIR)/Buenosd-Buenosd.Po
+#	$(AM_V_CXX)source='Buenosd.cpp' object='Buenosd-Buenosd.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(Buenasd_CPPFLAGS) $(CPPFLAGS) $(Buenasd_CXXFLAGS) $(CXXFLAGS) -c -o Buenasd-Buenasd.obj `if test -f 'Buenasd.cpp'; then $(CYGPATH_W) 'Buenasd.cpp'; else $(CYGPATH_W) '$(srcdir)/Buenasd.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(Buenosd_CPPFLAGS) $(CPPFLAGS) $(Buenosd_CXXFLAGS) $(CXXFLAGS) -c -o Buenosd-Buenosd.obj `if test -f 'Buenosd.cpp'; then $(CYGPATH_W) 'Buenosd.cpp'; else $(CYGPATH_W) '$(srcdir)/Buenosd.cpp'; fi`
 
 bench/bench_bench_bitcoin-bench_bitcoin.o: bench/bench_bitcoin.cpp
 	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_bitcoin_CPPFLAGS) $(CPPFLAGS) $(bench_bench_bitcoin_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_bitcoin-bench_bitcoin.o -MD -MP -MF bench/$(DEPDIR)/bench_bench_bitcoin-bench_bitcoin.Tpo -c -o bench/bench_bench_bitcoin-bench_bitcoin.o `test -f 'bench/bench_bitcoin.cpp' || echo '$(srcdir)/'`bench/bench_bitcoin.cpp
@@ -8397,19 +8397,19 @@ bench/bench_bench_bitcoin-coin_selection.obj: bench/coin_selection.cpp
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
 #	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_bitcoin_CPPFLAGS) $(CPPFLAGS) $(bench_bench_bitcoin_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_bitcoin-coin_selection.obj `if test -f 'bench/coin_selection.cpp'; then $(CYGPATH_W) 'bench/coin_selection.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/coin_selection.cpp'; fi`
 
-qt/qt_Buenas_qt-bitcoin.o: qt/bitcoin.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_Buenas_qt_CPPFLAGS) $(CPPFLAGS) $(qt_Buenas_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/qt_Buenas_qt-bitcoin.o -MD -MP -MF qt/$(DEPDIR)/qt_Buenas_qt-bitcoin.Tpo -c -o qt/qt_Buenas_qt-bitcoin.o `test -f 'qt/bitcoin.cpp' || echo '$(srcdir)/'`qt/bitcoin.cpp
-	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_Buenas_qt-bitcoin.Tpo qt/$(DEPDIR)/qt_Buenas_qt-bitcoin.Po
-#	$(AM_V_CXX)source='qt/bitcoin.cpp' object='qt/qt_Buenas_qt-bitcoin.o' libtool=no \
+qt/qt_Buenos_qt-bitcoin.o: qt/bitcoin.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_Buenos_qt_CPPFLAGS) $(CPPFLAGS) $(qt_Buenos_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/qt_Buenos_qt-bitcoin.o -MD -MP -MF qt/$(DEPDIR)/qt_Buenos_qt-bitcoin.Tpo -c -o qt/qt_Buenos_qt-bitcoin.o `test -f 'qt/bitcoin.cpp' || echo '$(srcdir)/'`qt/bitcoin.cpp
+	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_Buenos_qt-bitcoin.Tpo qt/$(DEPDIR)/qt_Buenos_qt-bitcoin.Po
+#	$(AM_V_CXX)source='qt/bitcoin.cpp' object='qt/qt_Buenos_qt-bitcoin.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_Buenas_qt_CPPFLAGS) $(CPPFLAGS) $(qt_Buenas_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_Buenas_qt-bitcoin.o `test -f 'qt/bitcoin.cpp' || echo '$(srcdir)/'`qt/bitcoin.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_Buenos_qt_CPPFLAGS) $(CPPFLAGS) $(qt_Buenos_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_Buenos_qt-bitcoin.o `test -f 'qt/bitcoin.cpp' || echo '$(srcdir)/'`qt/bitcoin.cpp
 
-qt/qt_Buenas_qt-bitcoin.obj: qt/bitcoin.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_Buenas_qt_CPPFLAGS) $(CPPFLAGS) $(qt_Buenas_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/qt_Buenas_qt-bitcoin.obj -MD -MP -MF qt/$(DEPDIR)/qt_Buenas_qt-bitcoin.Tpo -c -o qt/qt_Buenas_qt-bitcoin.obj `if test -f 'qt/bitcoin.cpp'; then $(CYGPATH_W) 'qt/bitcoin.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/bitcoin.cpp'; fi`
-	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_Buenas_qt-bitcoin.Tpo qt/$(DEPDIR)/qt_Buenas_qt-bitcoin.Po
-#	$(AM_V_CXX)source='qt/bitcoin.cpp' object='qt/qt_Buenas_qt-bitcoin.obj' libtool=no \
+qt/qt_Buenos_qt-bitcoin.obj: qt/bitcoin.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_Buenos_qt_CPPFLAGS) $(CPPFLAGS) $(qt_Buenos_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/qt_Buenos_qt-bitcoin.obj -MD -MP -MF qt/$(DEPDIR)/qt_Buenos_qt-bitcoin.Tpo -c -o qt/qt_Buenos_qt-bitcoin.obj `if test -f 'qt/bitcoin.cpp'; then $(CYGPATH_W) 'qt/bitcoin.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/bitcoin.cpp'; fi`
+	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_Buenos_qt-bitcoin.Tpo qt/$(DEPDIR)/qt_Buenos_qt-bitcoin.Po
+#	$(AM_V_CXX)source='qt/bitcoin.cpp' object='qt/qt_Buenos_qt-bitcoin.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_Buenas_qt_CPPFLAGS) $(CPPFLAGS) $(qt_Buenas_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_Buenas_qt-bitcoin.obj `if test -f 'qt/bitcoin.cpp'; then $(CYGPATH_W) 'qt/bitcoin.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/bitcoin.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_Buenos_qt_CPPFLAGS) $(CPPFLAGS) $(qt_Buenos_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_Buenos_qt-bitcoin.obj `if test -f 'qt/bitcoin.cpp'; then $(CYGPATH_W) 'qt/bitcoin.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/bitcoin.cpp'; fi`
 
 qt/test/qt_test_test_bitcoin_qt-compattests.o: qt/test/compattests.cpp
 	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_bitcoin_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_bitcoin_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_bitcoin_qt-compattests.o -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_bitcoin_qt-compattests.Tpo -c -o qt/test/qt_test_test_bitcoin_qt-compattests.o `test -f 'qt/test/compattests.cpp' || echo '$(srcdir)/'`qt/test/compattests.cpp
@@ -9403,33 +9403,33 @@ test/test_test_bitcoin_fuzzy-test_bitcoin_fuzzy.obj: test/test_bitcoin_fuzzy.cpp
 #	DEPDIR=$(DEPDIR) $(OBJCXXDEPMODE) $(depcomp) \
 #	$(AM_V_OBJCXX_no)$(LTOBJCXXCOMPILE) -c -o $@ $<
 
-qt/qt_Buenas_qt-macdockiconhandler.o: qt/macdockiconhandler.mm
-	$(AM_V_OBJCXX)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_Buenas_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -MT qt/qt_Buenas_qt-macdockiconhandler.o -MD -MP -MF qt/$(DEPDIR)/qt_Buenas_qt-macdockiconhandler.Tpo -c -o qt/qt_Buenas_qt-macdockiconhandler.o `test -f 'qt/macdockiconhandler.mm' || echo '$(srcdir)/'`qt/macdockiconhandler.mm
-	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_Buenas_qt-macdockiconhandler.Tpo qt/$(DEPDIR)/qt_Buenas_qt-macdockiconhandler.Po
-#	$(AM_V_OBJCXX)source='qt/macdockiconhandler.mm' object='qt/qt_Buenas_qt-macdockiconhandler.o' libtool=no \
+qt/qt_Buenos_qt-macdockiconhandler.o: qt/macdockiconhandler.mm
+	$(AM_V_OBJCXX)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_Buenos_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -MT qt/qt_Buenos_qt-macdockiconhandler.o -MD -MP -MF qt/$(DEPDIR)/qt_Buenos_qt-macdockiconhandler.Tpo -c -o qt/qt_Buenos_qt-macdockiconhandler.o `test -f 'qt/macdockiconhandler.mm' || echo '$(srcdir)/'`qt/macdockiconhandler.mm
+	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_Buenos_qt-macdockiconhandler.Tpo qt/$(DEPDIR)/qt_Buenos_qt-macdockiconhandler.Po
+#	$(AM_V_OBJCXX)source='qt/macdockiconhandler.mm' object='qt/qt_Buenos_qt-macdockiconhandler.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(OBJCXXDEPMODE) $(depcomp) \
-#	$(AM_V_OBJCXX_no)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_Buenas_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -c -o qt/qt_Buenas_qt-macdockiconhandler.o `test -f 'qt/macdockiconhandler.mm' || echo '$(srcdir)/'`qt/macdockiconhandler.mm
+#	$(AM_V_OBJCXX_no)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_Buenos_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -c -o qt/qt_Buenos_qt-macdockiconhandler.o `test -f 'qt/macdockiconhandler.mm' || echo '$(srcdir)/'`qt/macdockiconhandler.mm
 
-qt/qt_Buenas_qt-macdockiconhandler.obj: qt/macdockiconhandler.mm
-	$(AM_V_OBJCXX)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_Buenas_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -MT qt/qt_Buenas_qt-macdockiconhandler.obj -MD -MP -MF qt/$(DEPDIR)/qt_Buenas_qt-macdockiconhandler.Tpo -c -o qt/qt_Buenas_qt-macdockiconhandler.obj `if test -f 'qt/macdockiconhandler.mm'; then $(CYGPATH_W) 'qt/macdockiconhandler.mm'; else $(CYGPATH_W) '$(srcdir)/qt/macdockiconhandler.mm'; fi`
-	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_Buenas_qt-macdockiconhandler.Tpo qt/$(DEPDIR)/qt_Buenas_qt-macdockiconhandler.Po
-#	$(AM_V_OBJCXX)source='qt/macdockiconhandler.mm' object='qt/qt_Buenas_qt-macdockiconhandler.obj' libtool=no \
+qt/qt_Buenos_qt-macdockiconhandler.obj: qt/macdockiconhandler.mm
+	$(AM_V_OBJCXX)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_Buenos_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -MT qt/qt_Buenos_qt-macdockiconhandler.obj -MD -MP -MF qt/$(DEPDIR)/qt_Buenos_qt-macdockiconhandler.Tpo -c -o qt/qt_Buenos_qt-macdockiconhandler.obj `if test -f 'qt/macdockiconhandler.mm'; then $(CYGPATH_W) 'qt/macdockiconhandler.mm'; else $(CYGPATH_W) '$(srcdir)/qt/macdockiconhandler.mm'; fi`
+	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_Buenos_qt-macdockiconhandler.Tpo qt/$(DEPDIR)/qt_Buenos_qt-macdockiconhandler.Po
+#	$(AM_V_OBJCXX)source='qt/macdockiconhandler.mm' object='qt/qt_Buenos_qt-macdockiconhandler.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(OBJCXXDEPMODE) $(depcomp) \
-#	$(AM_V_OBJCXX_no)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_Buenas_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -c -o qt/qt_Buenas_qt-macdockiconhandler.obj `if test -f 'qt/macdockiconhandler.mm'; then $(CYGPATH_W) 'qt/macdockiconhandler.mm'; else $(CYGPATH_W) '$(srcdir)/qt/macdockiconhandler.mm'; fi`
+#	$(AM_V_OBJCXX_no)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_Buenos_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -c -o qt/qt_Buenos_qt-macdockiconhandler.obj `if test -f 'qt/macdockiconhandler.mm'; then $(CYGPATH_W) 'qt/macdockiconhandler.mm'; else $(CYGPATH_W) '$(srcdir)/qt/macdockiconhandler.mm'; fi`
 
-qt/qt_Buenas_qt-macnotificationhandler.o: qt/macnotificationhandler.mm
-	$(AM_V_OBJCXX)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_Buenas_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -MT qt/qt_Buenas_qt-macnotificationhandler.o -MD -MP -MF qt/$(DEPDIR)/qt_Buenas_qt-macnotificationhandler.Tpo -c -o qt/qt_Buenas_qt-macnotificationhandler.o `test -f 'qt/macnotificationhandler.mm' || echo '$(srcdir)/'`qt/macnotificationhandler.mm
-	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_Buenas_qt-macnotificationhandler.Tpo qt/$(DEPDIR)/qt_Buenas_qt-macnotificationhandler.Po
-#	$(AM_V_OBJCXX)source='qt/macnotificationhandler.mm' object='qt/qt_Buenas_qt-macnotificationhandler.o' libtool=no \
+qt/qt_Buenos_qt-macnotificationhandler.o: qt/macnotificationhandler.mm
+	$(AM_V_OBJCXX)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_Buenos_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -MT qt/qt_Buenos_qt-macnotificationhandler.o -MD -MP -MF qt/$(DEPDIR)/qt_Buenos_qt-macnotificationhandler.Tpo -c -o qt/qt_Buenos_qt-macnotificationhandler.o `test -f 'qt/macnotificationhandler.mm' || echo '$(srcdir)/'`qt/macnotificationhandler.mm
+	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_Buenos_qt-macnotificationhandler.Tpo qt/$(DEPDIR)/qt_Buenos_qt-macnotificationhandler.Po
+#	$(AM_V_OBJCXX)source='qt/macnotificationhandler.mm' object='qt/qt_Buenos_qt-macnotificationhandler.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(OBJCXXDEPMODE) $(depcomp) \
-#	$(AM_V_OBJCXX_no)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_Buenas_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -c -o qt/qt_Buenas_qt-macnotificationhandler.o `test -f 'qt/macnotificationhandler.mm' || echo '$(srcdir)/'`qt/macnotificationhandler.mm
+#	$(AM_V_OBJCXX_no)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_Buenos_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -c -o qt/qt_Buenos_qt-macnotificationhandler.o `test -f 'qt/macnotificationhandler.mm' || echo '$(srcdir)/'`qt/macnotificationhandler.mm
 
-qt/qt_Buenas_qt-macnotificationhandler.obj: qt/macnotificationhandler.mm
-	$(AM_V_OBJCXX)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_Buenas_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -MT qt/qt_Buenas_qt-macnotificationhandler.obj -MD -MP -MF qt/$(DEPDIR)/qt_Buenas_qt-macnotificationhandler.Tpo -c -o qt/qt_Buenas_qt-macnotificationhandler.obj `if test -f 'qt/macnotificationhandler.mm'; then $(CYGPATH_W) 'qt/macnotificationhandler.mm'; else $(CYGPATH_W) '$(srcdir)/qt/macnotificationhandler.mm'; fi`
-	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_Buenas_qt-macnotificationhandler.Tpo qt/$(DEPDIR)/qt_Buenas_qt-macnotificationhandler.Po
-#	$(AM_V_OBJCXX)source='qt/macnotificationhandler.mm' object='qt/qt_Buenas_qt-macnotificationhandler.obj' libtool=no \
+qt/qt_Buenos_qt-macnotificationhandler.obj: qt/macnotificationhandler.mm
+	$(AM_V_OBJCXX)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_Buenos_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -MT qt/qt_Buenos_qt-macnotificationhandler.obj -MD -MP -MF qt/$(DEPDIR)/qt_Buenos_qt-macnotificationhandler.Tpo -c -o qt/qt_Buenos_qt-macnotificationhandler.obj `if test -f 'qt/macnotificationhandler.mm'; then $(CYGPATH_W) 'qt/macnotificationhandler.mm'; else $(CYGPATH_W) '$(srcdir)/qt/macnotificationhandler.mm'; fi`
+	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_Buenos_qt-macnotificationhandler.Tpo qt/$(DEPDIR)/qt_Buenos_qt-macnotificationhandler.Po
+#	$(AM_V_OBJCXX)source='qt/macnotificationhandler.mm' object='qt/qt_Buenos_qt-macnotificationhandler.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(OBJCXXDEPMODE) $(depcomp) \
-#	$(AM_V_OBJCXX_no)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_Buenas_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -c -o qt/qt_Buenas_qt-macnotificationhandler.obj `if test -f 'qt/macnotificationhandler.mm'; then $(CYGPATH_W) 'qt/macnotificationhandler.mm'; else $(CYGPATH_W) '$(srcdir)/qt/macnotificationhandler.mm'; fi`
+#	$(AM_V_OBJCXX_no)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_Buenos_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -c -o qt/qt_Buenos_qt-macnotificationhandler.obj `if test -f 'qt/macnotificationhandler.mm'; then $(CYGPATH_W) 'qt/macnotificationhandler.mm'; else $(CYGPATH_W) '$(srcdir)/qt/macnotificationhandler.mm'; fi`
 
 mostlyclean-libtool:
 	-rm -f *.lo
@@ -10076,7 +10076,7 @@ bitcoin_bench_clean : FORCE
 # Most files will depend on the forms and moc files as includes. Generate them
 # before anything else.
 $(QT_MOC): $(QT_FORMS_H)
-$(qt_libbitcoinqt_a_OBJECTS) $(qt_Buenas_qt_OBJECTS) : | $(QT_MOC)
+$(qt_libbitcoinqt_a_OBJECTS) $(qt_Buenos_qt_OBJECTS) : | $(QT_MOC)
 
 #Generating these with a half-written protobuf header leads to wacky results.
 #This makes sure it's done.
@@ -10106,9 +10106,9 @@ $(QT_QRC_CPP): $(QT_QRC) $(QT_FORMS_H) $(RES_ICONS) $(RES_IMAGES) $(RES_MOVIES) 
 	  $(SED) -e '/^\*\*.*Created:/d' -e '/^\*\*.*by:/d' > $@
 
 bitcoin_qt_clean: FORCE
-	rm -f $(CLEAN_QT) $(qt_libbitcoinqt_a_OBJECTS) $(qt_Buenas_qt_OBJECTS) qt/Buenas-qt$(EXEEXT) $(LIBBITCOINQT)
+	rm -f $(CLEAN_QT) $(qt_libbitcoinqt_a_OBJECTS) $(qt_Buenos_qt_OBJECTS) qt/Buenos-qt$(EXEEXT) $(LIBBITCOINQT)
 
-bitcoin_qt : qt/Buenas-qt$(EXEEXT)
+bitcoin_qt : qt/Buenos-qt$(EXEEXT)
 
 ui_%.h: %.ui
 	@test -f $(UIC)

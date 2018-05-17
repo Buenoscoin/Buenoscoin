@@ -232,7 +232,8 @@ am__DIST_COMMON = $(srcdir)/Makefile.in \
 	$(top_srcdir)/src/config/bitcoin-config.h.in \
 	$(top_srcdir)/src/test/buildenv.py.in COPYING \
 	build-aux/compile build-aux/config.guess build-aux/config.sub \
-	build-aux/install-sh build-aux/ltmain.sh build-aux/missing
+	build-aux/depcomp build-aux/install-sh build-aux/ltmain.sh \
+	build-aux/missing
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
 distdir = $(PACKAGE)-$(VERSION)
 top_distdir = $(distdir)
@@ -376,7 +377,7 @@ LUPDATE = @LUPDATE@
 MAINT = @MAINT@
 MAKEINFO = @MAKEINFO@
 MAKENSIS = @MAKENSIS@
-BUENFEST_TOOL = @BUENFEST_TOOL@
+MANIFEST_TOOL = @MANIFEST_TOOL@
 MINIUPNPC_CPPFLAGS = @MINIUPNPC_CPPFLAGS@
 MINIUPNPC_LIBS = @MINIUPNPC_LIBS@
 MKDIR_P = @MKDIR_P@
@@ -529,7 +530,7 @@ BITCOIN_CLI_BIN = $(top_builddir)/src/$(BITCOIN_CLI_NAME)$(EXEEXT)
 BITCOIN_WIN_INSTALLER = $(PACKAGE)-$(PACKAGE_VERSION)-win$(WINDOWS_BITS)-setup$(EXEEXT)
 empty := 
 space := $(empty) $(empty)
-OSX_APP = Buenas-Qt.app
+OSX_APP = Buenos-Qt.app
 OSX_VOLNAME = $(subst $(space),-,$(PACKAGE_NAME))
 OSX_DMG = $(OSX_VOLNAME).dmg
 OSX_BACKGROUND_SVG = background.svg
@@ -538,7 +539,7 @@ OSX_BACKGROUND_IMAGE_DPIS = 36 72
 OSX_DSSTORE_GEN = $(top_srcdir)/contrib/macdeploy/custom_dsstore.py
 OSX_DEPLOY_SCRIPT = $(top_srcdir)/contrib/macdeploy/macdeployqtplus
 OSX_FANCY_PLIST = $(top_srcdir)/contrib/macdeploy/fancy.plist
-OSX_INSTALLER_ICONS = $(top_srcdir)/src/qt/res/icons/Buenas.icns
+OSX_INSTALLER_ICONS = $(top_srcdir)/src/qt/res/icons/Buenos.icns
 OSX_PLIST = $(top_builddir)/share/qt/Info.plist #not installed
 OSX_QT_TRANSLATIONS = da,de,es,hu,ru,uk,zh_CN,zh_TW
 DIST_DOCS = $(wildcard doc/*.md) $(wildcard doc/release-notes/*.md)
@@ -551,7 +552,7 @@ DIST_CONTRIB = $(top_srcdir)/contrib/bitcoin-cli.bash-completion \
 BIN_CHECKS = $(top_srcdir)/contrib/devtools/symbol-check.py \
            $(top_srcdir)/contrib/devtools/security-check.py
 
-WINDOWS_PACKAGING = $(top_srcdir)/share/pixmaps/Buenas.ico \
+WINDOWS_PACKAGING = $(top_srcdir)/share/pixmaps/Buenos.ico \
   $(top_srcdir)/share/pixmaps/nsis-header.bmp \
   $(top_srcdir)/share/pixmaps/nsis-wizard.bmp \
   $(top_srcdir)/doc/README_windows.txt
@@ -568,8 +569,8 @@ COVERAGE_INFO = baseline_filtered_combined.info baseline.info \
   leveldb_baseline_filtered.info test_bitcoin_coverage.info test_bitcoin.info
 
 OSX_APP_BUILT = $(OSX_APP)/Contents/PkgInfo $(OSX_APP)/Contents/Resources/empty.lproj \
-  $(OSX_APP)/Contents/Resources/Buenas.icns $(OSX_APP)/Contents/Info.plist \
-  $(OSX_APP)/Contents/MacOS/Buenas-Qt $(OSX_APP)/Contents/Resources/Base.lproj/InfoPlist.strings
+  $(OSX_APP)/Contents/Resources/Buenos.icns $(OSX_APP)/Contents/Info.plist \
+  $(OSX_APP)/Contents/MacOS/Buenos-Qt $(OSX_APP)/Contents/Resources/Base.lproj/InfoPlist.strings
 
 @BUILD_DARWIN_FALSE@APP_DIST_DIR = $(top_builddir)/dist
 @BUILD_DARWIN_FALSE@APP_DIST_EXTRAS = $(APP_DIST_DIR)/.background/$(OSX_BACKGROUND_IMAGE) $(APP_DIST_DIR)/.DS_Store $(APP_DIST_DIR)/Applications
@@ -1128,11 +1129,11 @@ $(OSX_APP)/Contents/Info.plist: $(OSX_PLIST)
 	$(MKDIR_P) $(@D)
 	$(INSTALL_DATA) $< $@
 
-$(OSX_APP)/Contents/Resources/Buenas.icns: $(OSX_INSTALLER_ICONS)
+$(OSX_APP)/Contents/Resources/Buenos.icns: $(OSX_INSTALLER_ICONS)
 	$(MKDIR_P) $(@D)
 	$(INSTALL_DATA) $< $@
 
-$(OSX_APP)/Contents/MacOS/Buenas-Qt: $(BITCOIN_QT_BIN)
+$(OSX_APP)/Contents/MacOS/Buenos-Qt: $(BITCOIN_QT_BIN)
 	$(MKDIR_P) $(@D)
 	STRIPPROG="$(STRIP)" $(INSTALL_STRIP_PROGRAM)  $< $@
 
@@ -1159,7 +1160,7 @@ osx_volname:
 @BUILD_DARWIN_FALSE@	@rm -f $@
 @BUILD_DARWIN_FALSE@	@cd $(@D); $(LN_S) /Applications $(@F)
 
-@BUILD_DARWIN_FALSE@$(APP_DIST_EXTRAS): $(APP_DIST_DIR)/$(OSX_APP)/Contents/MacOS/Buenas-Qt
+@BUILD_DARWIN_FALSE@$(APP_DIST_EXTRAS): $(APP_DIST_DIR)/$(OSX_APP)/Contents/MacOS/Buenos-Qt
 
 @BUILD_DARWIN_FALSE@$(OSX_DMG): $(APP_DIST_EXTRAS)
 @BUILD_DARWIN_FALSE@	$(GENISOIMAGE) -no-cache-inodes -D -l -probe -V "$(OSX_VOLNAME)" -no-pad -r -dir-mode 0755 -apple -o $@ dist
@@ -1173,7 +1174,7 @@ osx_volname:
 @BUILD_DARWIN_FALSE@$(APP_DIST_DIR)/.DS_Store: $(OSX_DSSTORE_GEN)
 @BUILD_DARWIN_FALSE@	$(PYTHON) $< "$@" "$(OSX_VOLNAME)"
 
-@BUILD_DARWIN_FALSE@$(APP_DIST_DIR)/$(OSX_APP)/Contents/MacOS/Buenas-Qt: $(OSX_APP_BUILT) $(OSX_PACKAGING)
+@BUILD_DARWIN_FALSE@$(APP_DIST_DIR)/$(OSX_APP)/Contents/MacOS/Buenos-Qt: $(OSX_APP_BUILT) $(OSX_PACKAGING)
 @BUILD_DARWIN_FALSE@	INSTALLNAMETOOL=$(INSTALLNAMETOOL)  OTOOL=$(OTOOL) STRIP=$(STRIP) $(PYTHON) $(OSX_DEPLOY_SCRIPT) $(OSX_APP) -translations-dir=$(QT_TRANSLATION_DIR) -add-qt-tr $(OSX_QT_TRANSLATIONS) -verbose 2
 
 @BUILD_DARWIN_FALSE@deploydir: $(APP_DIST_EXTRAS)

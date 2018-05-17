@@ -130,7 +130,7 @@
         <translation>Промени &amp;лозинку...</translation>
     </message>
     <message>
-        <source>Send coins to a Buenas address</source>
+        <source>Send coins to a Buenos address</source>
         <translation>Пошаљите новац на bitcoin адресу</translation>
     </message>
     <message>

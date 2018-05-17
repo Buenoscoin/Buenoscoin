@@ -66,11 +66,11 @@ TESTS =
 BENCHMARKS =
 
 if BUILD_BITCOIND
-  bin_PROGRAMS += Buenasd
+  bin_PROGRAMS += Buenosd
 endif
 
 if BUILD_BITCOIN_UTILS
-  bin_PROGRAMS += Buenas-cli Buenas-tx
+  bin_PROGRAMS += Buenos-cli Buenos-tx
 endif
 
 .PHONY: FORCE check-symbols check-security
@@ -359,7 +359,7 @@ if GLIBC_BACK_COMPAT
 libbitcoin_util_a_SOURCES += compat/glibc_compat.cpp
 endif
 
-# cli: shared between Buenas and bitcoin-qt
+# cli: shared between Buenos and bitcoin-qt
 libbitcoin_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_cli_a_SOURCES = \
@@ -369,17 +369,17 @@ libbitcoin_cli_a_SOURCES = \
 nodist_libbitcoin_util_a_SOURCES = $(srcdir)/obj/build.h
 #
 
-# Buenasd binary #
-Buenasd_SOURCES = Buenasd.cpp
-Buenasd_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-Buenasd_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-Buenasd_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# Buenosd binary #
+Buenosd_SOURCES = Buenosd.cpp
+Buenosd_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+Buenosd_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+Buenosd_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-Buenasd_SOURCES += bitcoind-res.rc
+Buenosd_SOURCES += bitcoind-res.rc
 endif
 
-Buenasd_LDADD = \
+Buenosd_LDADD = \
   $(LIBBITCOIN_SERVER) \
   $(LIBBITCOIN_COMMON) \
   $(LIBUNIVALUE) \
@@ -392,38 +392,38 @@ Buenasd_LDADD = \
   $(LIBMEMENV) \
   $(LIBSECP256K1)
 
-Buenasd_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS) 
+Buenosd_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS) 
 
-# Buenas binary #
-Buenas_cli_SOURCES = Buenas-cli.cpp
-Buenas_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
-Buenas_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-Buenas_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# Buenos binary #
+Buenos_cli_SOURCES = Buenos-cli.cpp
+Buenos_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
+Buenos_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+Buenos_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-Buenas_cli_SOURCES += Buenas-cli-res.rc
+Buenos_cli_SOURCES += Buenos-cli-res.rc
 endif
 
-Buenas_cli_LDADD = \
+Buenos_cli_LDADD = \
   $(LIBBITCOIN_CLI) \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_UTIL) \
   $(LIBBITCOIN_CRYPTO)
 
-Buenas_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
+Buenos_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
 #
 
-# Buenas-tx binary #
-Buenas_tx_SOURCES = Buenas-tx.cpp
-Buenas_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-Buenas_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-Buenas_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# Buenos-tx binary #
+Buenos_tx_SOURCES = Buenos-tx.cpp
+Buenos_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+Buenos_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+Buenos_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-Buenas_tx_SOURCES += Buenas-tx-res.rc
+Buenos_tx_SOURCES += Buenos-tx-res.rc
 endif
 
-Buenas_tx_LDADD = \
+Buenos_tx_LDADD = \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_COMMON) \
   $(LIBBITCOIN_UTIL) \
@@ -431,7 +431,7 @@ Buenas_tx_LDADD = \
   $(LIBBITCOIN_CRYPTO) \
   $(LIBSECP256K1)
 
-Buenas_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
+Buenos_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
 #
 
 # bitcoinconsensus library #

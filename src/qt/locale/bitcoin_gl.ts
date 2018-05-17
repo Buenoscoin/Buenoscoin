@@ -130,7 +130,7 @@
         <translation>Reindexando bloques no disco...</translation>
     </message>
     <message>
-        <source>Send coins to a Buenas address</source>
+        <source>Send coins to a Buenos address</source>
         <translation>Enviar moedas a unha dirección Bitcoin</translation>
     </message>
     <message>
@@ -182,12 +182,12 @@
         <translation>Encriptar as claves privadas que pertencen ao teu moedeiro</translation>
     </message>
     <message>
-        <source>Sign messages with your Buenas addresses to prove you own them</source>
-        <translation>Asina mensaxes coas túas direccións Buenas para probar que te pertencen</translation>
+        <source>Sign messages with your Buenos addresses to prove you own them</source>
+        <translation>Asina mensaxes coas túas direccións Buenos para probar que te pertencen</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Buenas addresses</source>
-        <translation>Verificar mensaxes para asegurar que foron asinados con direccións Buenas dadas.</translation>
+        <source>Verify messages to ensure they were signed with specified Buenos addresses</source>
+        <translation>Verificar mensaxes para asegurar que foron asinados con direccións Buenos dadas.</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -466,8 +466,8 @@
         <translation>Moedeiro</translation>
     </message>
     <message>
-        <source>Automatically open the Buenas client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Abrir automáticamente o porto do cliente Buenas no router. Esto so funciona se o teu router soporta UPnP e está habilitado.</translation>
+        <source>Automatically open the Buenos client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Abrir automáticamente o porto do cliente Buenos no router. Esto so funciona se o teu router soporta UPnP e está habilitado.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -545,8 +545,8 @@
         <translation>Formulario</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Buenas network after a connection is established, but this process has not completed yet.</source>
-        <translation>A información amosada por estar desactualizada. O teu moedeiro sincronízase automáticamente coa rede Buenas despois de que se estableza unha conexión, pero este proceso non está todavía rematado.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Buenos network after a connection is established, but this process has not completed yet.</source>
+        <translation>A información amosada por estar desactualizada. O teu moedeiro sincronízase automáticamente coa rede Buenos despois de que se estableza unha conexión, pero este proceso non está todavía rematado.</translation>
     </message>
     <message>
         <source>Your current spendable balance</source>
@@ -927,7 +927,7 @@
         <translation>Copiar a sinatura actual ao portapapeis do sistema</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Buenas address</source>
+        <source>Sign the message to prove you own this Buenos address</source>
         <translation>Asina a mensaxe para probar que posees esta dirección Bitcoin</translation>
     </message>
     <message>
@@ -947,8 +947,8 @@
         <translation>&amp;Verificar Mensaxe</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Buenas address</source>
-        <translation>Verificar a mensaxe para asegurar que foi asinada coa dirección Buenas especificada</translation>
+        <source>Verify the message to ensure it was signed with the specified Buenos address</source>
+        <translation>Verificar a mensaxe para asegurar que foi asinada coa dirección Buenos especificada</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -1028,7 +1028,7 @@
         <translation>Executar no fondo como un demo e aceptar comandos</translation>
     </message>
     <message>
-        <source>Buenas Core</source>
+        <source>Buenos Core</source>
         <translation>Core de Bitcoin</translation>
     </message>
     <message>

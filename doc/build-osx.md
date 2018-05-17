@@ -24,17 +24,17 @@ In case you want to build the disk image with `make deploy` (.dmg / optional), y
 
 NOTE: Building with Qt4 is still supported, however, could result in a broken UI. Building with Qt5 is recommended.
 
-Build Buenas Core
+Build Buenos Core
 ------------------------
 
-1. Clone the Buenas source code and cd into `Buenas`
+1. Clone the Buenos source code and cd into `Buenos`
 
-        git clone https://github.com/Buenas/Buenas
-        cd Buenas
+        git clone https://github.com/Buenos/Buenos
+        cd Buenos
 
-2.  Build Buenas-core:
+2.  Build Buenos-core:
 
-    Configure and build the headless Buenas binaries as well as the GUI (if Qt is found).
+    Configure and build the headless Buenos binaries as well as the GUI (if Qt is found).
 
     You can disable the GUI build by passing `--without-gui` to configure.
 
@@ -53,37 +53,37 @@ Build Buenas Core
 Running
 -------
 
-Buenas Core is now available at `./src/Buenasd`
+Buenos Core is now available at `./src/Buenosd`
 
 Before running, it's recommended you create an RPC configuration file.
 
-    echo -e "rpcuser=Buenasrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/Buenas/Buenas.conf"
+    echo -e "rpcuser=Buenosrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/Buenos/Buenos.conf"
 
-    chmod 600 "/Users/${USER}/Library/Application Support/Buenas/Buenas.conf"
+    chmod 600 "/Users/${USER}/Library/Application Support/Buenos/Buenos.conf"
 
-The first time you run Buenasd, it will start downloading the blockchain. This process could take several hours.
+The first time you run Buenosd, it will start downloading the blockchain. This process could take several hours.
 
 You can monitor the download process by looking at the debug.log file:
 
-    tail -f $HOME/Library/Application\ Support/Buenas/debug.log
+    tail -f $HOME/Library/Application\ Support/Buenos/debug.log
 
 Other commands:
 -------
 
-    ./src/Buenasd -daemon # Starts the Buenas daemon.
-    ./src/Buenas-cli --help # Outputs a list of command-line options.
-    ./src/Buenas-cli help # Outputs a list of RPC commands when the daemon is running.
+    ./src/Buenosd -daemon # Starts the Buenos daemon.
+    ./src/Buenos-cli --help # Outputs a list of command-line options.
+    ./src/Buenos-cli help # Outputs a list of RPC commands when the daemon is running.
 
 Using Qt Creator as IDE
 ------------------------
-You can use Qt Creator as an IDE, for Buenas development.
+You can use Qt Creator as an IDE, for Buenos development.
 Download and install the community edition of [Qt Creator](https://www.qt.io/download/).
 Uncheck everything except Qt Creator during the installation process.
 
 1. Make sure you installed everything through Homebrew mentioned above
 2. Do a proper ./configure --enable-debug
 3. In Qt Creator do "New Project" -> Import Project -> Import Existing Project
-4. Enter "Buenas-qt" as project name, enter src/qt as location
+4. Enter "Buenos-qt" as project name, enter src/qt as location
 5. Leave the file selection as it is
 6. Confirm the "summary page"
 7. In the "Projects" tab select "Manage Kits..."
@@ -96,4 +96,4 @@ Notes
 
 * Tested on OS X 10.8 through 10.12 on 64-bit Intel processors only.
 
-* Building with downloaded Qt binaries is not officially supported. See the notes in [#7714](https://github.com/Buenas/Buenas/issues/7714)
+* Building with downloaded Qt binaries is not officially supported. See the notes in [#7714](https://github.com/Buenos/Buenos/issues/7714)

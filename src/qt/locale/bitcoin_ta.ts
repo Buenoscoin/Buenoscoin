@@ -708,8 +708,8 @@
 <context>
     <name>bitcoin-core</name>
     <message>
-        <source>Buenas Core</source>
-        <translation>Buenas மையம்</translation>
+        <source>Buenos Core</source>
+        <translation>Buenos மையம்</translation>
     </message>
     <message>
         <source>(default: %u)</source>

@@ -760,8 +760,8 @@
         <translation>Valikud:</translation>
     </message>
     <message>
-        <source>Buenas Core</source>
-        <translation>Buenas Core</translation>
+        <source>Buenos Core</source>
+        <translation>Buenos Core</translation>
     </message>
     <message>
         <source>Information</source>

@@ -142,7 +142,7 @@
         <translation>Deschide &amp;URI...</translation>
     </message>
     <message>
-        <source>Send coins to a Buenas address</source>
+        <source>Send coins to a Buenos address</source>
         <translation>Trimite monedele către o adresă Bitcoin</translation>
     </message>
     <message>
@@ -194,12 +194,12 @@
         <translation>Criptează cheile private care aparțin portofelului tău.</translation>
     </message>
     <message>
-        <source>Sign messages with your Buenas addresses to prove you own them</source>
-        <translation>Semnează mesajele cu adresa ta de Buenas pentru a face dovada că îți aparțin.</translation>
+        <source>Sign messages with your Buenos addresses to prove you own them</source>
+        <translation>Semnează mesajele cu adresa ta de Buenos pentru a face dovada că îți aparțin.</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Buenas addresses</source>
-        <translation>Verifică mesajele cu scopul de a asigura faptul că au fost semnate cu adresa de Buenas specificată.</translation>
+        <source>Verify messages to ensure they were signed with specified Buenos addresses</source>
+        <translation>Verifică mesajele cu scopul de a asigura faptul că au fost semnate cu adresa de Buenos specificată.</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -748,8 +748,8 @@
 <context>
     <name>bitcoin-core</name>
     <message>
-        <source>Buenas Core</source>
-        <translation>Buenas Core</translation>
+        <source>Buenos Core</source>
+        <translation>Buenos Core</translation>
     </message>
     <message>
         <source>Information</source>

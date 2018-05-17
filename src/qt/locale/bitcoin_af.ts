@@ -62,11 +62,11 @@
         <translation>Ontvanger adresse</translation>
     </message>
     <message>
-        <source>These are your Buenas addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Hierdie is die adresse vanwaar u Buenas betalings stuur. U moet altyd die bedrag en die adres van die ontvanger nagaan voordat u enige munte stuur.</translation>
+        <source>These are your Buenos addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Hierdie is die adresse vanwaar u Buenos betalings stuur. U moet altyd die bedrag en die adres van die ontvanger nagaan voordat u enige munte stuur.</translation>
     </message>
     <message>
-        <source>These are your Buenas addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <source>These are your Buenos addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
         <translation>Hierdie is die adresse waar u Bitcoins sal ontvang. Ons beveel aan dat u 'n nuwe adres kies vir elke transaksie</translation>
     </message>
     <message>
@@ -330,8 +330,8 @@
         <translation>Besig met herindeksering van blokke op hardeskyf...</translation>
     </message>
     <message>
-        <source>Send coins to a Buenas address</source>
-        <translation>Stuur munte na 'n Buenas adres</translation>
+        <source>Send coins to a Buenos address</source>
+        <translation>Stuur munte na 'n Buenos adres</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -378,12 +378,12 @@
         <translation>Kodifiseer die private sleutes wat aan jou beursie gekoppel is.</translation>
     </message>
     <message>
-        <source>Sign messages with your Buenas addresses to prove you own them</source>
-        <translation>Onderteken boodskappe met u Buenas adresse om u eienaarskap te bewys</translation>
+        <source>Sign messages with your Buenos addresses to prove you own them</source>
+        <translation>Onderteken boodskappe met u Buenos adresse om u eienaarskap te bewys</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Buenas addresses</source>
-        <translation>Verifieër boodskappe om seker te maak dat dit met die gespesifiseerde Buenas adresse</translation>
+        <source>Verify messages to ensure they were signed with specified Buenos addresses</source>
+        <translation>Verifieër boodskappe om seker te maak dat dit met die gespesifiseerde Buenos adresse</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -948,8 +948,8 @@
 <context>
     <name>bitcoin-core</name>
     <message>
-        <source>Buenas Core</source>
-        <translation>Buenas Kern</translation>
+        <source>Buenos Core</source>
+        <translation>Buenos Kern</translation>
     </message>
     <message>
         <source>Information</source>

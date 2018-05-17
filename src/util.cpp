@@ -103,8 +103,8 @@ namespace boost {
 
 using namespace std;
 
-const char * const BITCOIN_CONF_FILENAME = "Buenas.conf";
-const char * const BITCOIN_PID_FILENAME = "Buenas.pid";
+const char * const BITCOIN_CONF_FILENAME = "Buenos.conf";
+const char * const BITCOIN_PID_FILENAME = "Buenos.pid";
 
 CCriticalSection cs_args;
 map<string, string> mapArgs;
@@ -482,13 +482,13 @@ void PrintExceptionContinue(const std::exception* pex, const char* pszThread)
 boost::filesystem::path GetDefaultDataDir()
 {
     namespace fs = boost::filesystem;
-    // Windows < Vista: C:\Documents and Settings\Username\Application Data\Buenas
-    // Windows >= Vista: C:\Users\Username\AppData\Roaming\Buenas
-    // Mac: ~/Library/Application Support/Buenas
+    // Windows < Vista: C:\Documents and Settings\Username\Application Data\Buenos
+    // Windows >= Vista: C:\Users\Username\AppData\Roaming\Buenos
+    // Mac: ~/Library/Application Support/Buenos
     // Unix: ~/.bitcoin
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "Buenas";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "Buenos";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -498,10 +498,10 @@ boost::filesystem::path GetDefaultDataDir()
         pathRet = fs::path(pszHome);
 #ifdef MAC_OSX
     // Mac
-    return pathRet / "Library/Application Support/Buenas";
+    return pathRet / "Library/Application Support/Buenos";
 #else
     // Unix
-    return pathRet / ".Buenas";
+    return pathRet / ".Buenos";
 #endif
 #endif
 }
@@ -848,9 +848,9 @@ std::string CopyrightHolders(const std::string& strPrefix)
 {
     std::string strCopyrightHolders = strPrefix + strprintf(_(COPYRIGHT_HOLDERS), _(COPYRIGHT_HOLDERS_SUBSTITUTION));
 
-    // Check for untranslated substitution to make sure Buenas copyright is not removed by accident
-    if (strprintf(COPYRIGHT_HOLDERS, COPYRIGHT_HOLDERS_SUBSTITUTION).find("Buenas") == std::string::npos) {
-        strCopyrightHolders += "\n" + strPrefix + "The Buenas developers";
+    // Check for untranslated substitution to make sure Buenos copyright is not removed by accident
+    if (strprintf(COPYRIGHT_HOLDERS, COPYRIGHT_HOLDERS_SUBSTITUTION).find("Buenos") == std::string::npos) {
+        strCopyrightHolders += "\n" + strPrefix + "The Buenos developers";
     }
     return strCopyrightHolders;
 }

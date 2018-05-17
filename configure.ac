@@ -7,17 +7,17 @@ define(_CLIENT_VERSION_BUILD, 0)
 define(_CLIENT_VERSION_IS_RELEASE, true)
 define(_COPYRIGHT_YEAR, 2017)
 define(_COPYRIGHT_HOLDERS,[The %s developers])
-define(_COPYRIGHT_HOLDERS_SUBSTITUTION,[[Buenas]])
-AC_INIT([Buenas],[_CLIENT_VERSION_MAJOR._CLIENT_VERSION_MINOR._CLIENT_VERSION_REVISION],[https://github.com/bitcoin/bitcoin/issues],[Buenas],[https://Buenas.org/])
+define(_COPYRIGHT_HOLDERS_SUBSTITUTION,[[Buenos]])
+AC_INIT([Buenos],[_CLIENT_VERSION_MAJOR._CLIENT_VERSION_MINOR._CLIENT_VERSION_REVISION],[https://github.com/bitcoin/bitcoin/issues],[Buenos],[https://Buenos.org/])
 AC_CONFIG_SRCDIR([src/validation.cpp])
 AC_CONFIG_HEADERS([src/config/bitcoin-config.h])
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIR([build-aux/m4])
 
-BITCOIN_DAEMON_NAME=Buenasd
-BITCOIN_GUI_NAME=Buenas-qt
-BITCOIN_CLI_NAME=Buenas-cli
-BITCOIN_TX_NAME=Buenas-tx
+BITCOIN_DAEMON_NAME=Buenosd
+BITCOIN_GUI_NAME=Buenos-qt
+BITCOIN_CLI_NAME=Buenos-cli
+BITCOIN_TX_NAME=Buenos-tx
 
 AC_CANONICAL_HOST
 
@@ -240,7 +240,7 @@ CPPFLAGS="$CPPFLAGS -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS"
 
 AC_ARG_WITH([utils],
   [AS_HELP_STRING([--with-utils],
-  [build bitcoin-cli Buenas-tx (default=yes)])],
+  [build bitcoin-cli Buenos-tx (default=yes)])],
   [build_bitcoin_utils=$withval],
   [build_bitcoin_utils=yes])
 
@@ -920,7 +920,7 @@ AC_MSG_CHECKING([whether to build bitcoind])
 AM_CONDITIONAL([BUILD_BITCOIND], [test x$build_bitcoind = xyes])
 AC_MSG_RESULT($build_bitcoind)
 
-AC_MSG_CHECKING([whether to build utils (bitcoin-cli Buenas-tx)])
+AC_MSG_CHECKING([whether to build utils (bitcoin-cli Buenos-tx)])
 AM_CONDITIONAL([BUILD_BITCOIN_UTILS], [test x$build_bitcoin_utils = xyes])
 AC_MSG_RESULT($build_bitcoin_utils)
 

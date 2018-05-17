@@ -158,8 +158,8 @@
         <translation>Lemezen lévő blokkok újraindexelése...</translation>
     </message>
     <message>
-        <source>Send coins to a Buenas address</source>
-        <translation>Buenas küldése megadott címre</translation>
+        <source>Send coins to a Buenos address</source>
+        <translation>Buenos küldése megadott címre</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -210,11 +210,11 @@
         <translation>A tárcádhoz tartozó privát kulcsok titkosítása</translation>
     </message>
     <message>
-        <source>Sign messages with your Buenas addresses to prove you own them</source>
+        <source>Sign messages with your Buenos addresses to prove you own them</source>
         <translation>Üzenetek aláírása a Bitcoin-címmeiddel, amivel bizonyítod, hogy a cím a sajátod</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Buenas addresses</source>
+        <source>Verify messages to ensure they were signed with specified Buenos addresses</source>
         <translation>Üzenetek ellenőrzése, hogy valóban a megjelölt Bitcoin-címekkel vannak-e aláírva</translation>
     </message>
     <message>
@@ -254,8 +254,8 @@
         <translation>Paran&amp;cssor kapcsolók</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Buenas network</source>
-        <translation><numerusform>%n aktív kapcsolat a Buenas hálózathoz</numerusform><numerusform>%n aktív kapcsolat a Buenas hálózathoz</numerusform></translation>
+        <source>%n active connection(s) to Buenos network</source>
+        <translation><numerusform>%n aktív kapcsolat a Buenos hálózathoz</numerusform><numerusform>%n aktív kapcsolat a Buenos hálózathoz</numerusform></translation>
     </message>
     <message numerus="yes">
         <source>Processed %n block(s) of transaction history.</source>
@@ -592,7 +592,7 @@
         <translation>Szakértő</translation>
     </message>
     <message>
-        <source>Automatically open the Buenas client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <source>Automatically open the Buenos client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation>A Bitcoin-kliens portjának automatikus megnyitása a routeren. Ez csak akkor működik, ha a routered támogatja az UPnP-t és az engedélyezve is van rajta.</translation>
     </message>
     <message>
@@ -600,8 +600,8 @@
         <translation>&amp;UPnP port-feltérképezés</translation>
     </message>
     <message>
-        <source>Connect to the Buenas network through a SOCKS5 proxy.</source>
-        <translation>Csatlakozás a Buenas hálózatához SOCKS5 proxyn keresztül</translation>
+        <source>Connect to the Buenos network through a SOCKS5 proxy.</source>
+        <translation>Csatlakozás a Buenos hálózatához SOCKS5 proxyn keresztül</translation>
     </message>
     <message>
         <source>Proxy &amp;IP:</source>
@@ -695,8 +695,8 @@
         <translation>Űrlap</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Buenas network after a connection is established, but this process has not completed yet.</source>
-        <translation>A kijelzett információ lehet, hogy elavult. A pénztárcája automatikusan szinkronizálja magát a Buenas hálózattal miután a kapcsolat létrejön, de ez e folyamat még nem fejeződött be.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Buenos network after a connection is established, but this process has not completed yet.</source>
+        <translation>A kijelzett információ lehet, hogy elavult. A pénztárcája automatikusan szinkronizálja magát a Buenos hálózattal miután a kapcsolat létrejön, de ez e folyamat még nem fejeződött be.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -764,8 +764,8 @@
         <translation>Összeg</translation>
     </message>
     <message>
-        <source>Enter a Buenas address (e.g. %1)</source>
-        <translation>Ad meg egy Buenas címet (pl: %1)</translation>
+        <source>Enter a Buenos address (e.g. %1)</source>
+        <translation>Ad meg egy Buenos címet (pl: %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1285,7 +1285,7 @@
         <translation>A jelenleg kiválasztott aláírás másolása a rendszer-vágólapra</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Buenas address</source>
+        <source>Sign the message to prove you own this Buenos address</source>
         <translation>Üzenet </translation>
     </message>
     <message>
@@ -1378,8 +1378,8 @@
 </translation>
     </message>
     <message>
-        <source>Buenas Core</source>
-        <translation>Buenas Core</translation>
+        <source>Buenos Core</source>
+        <translation>Buenos Core</translation>
     </message>
     <message>
         <source>Execute command when a wallet transaction changes (%s in cmd is replaced by TxID)</source>

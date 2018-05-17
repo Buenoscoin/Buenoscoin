@@ -13,7 +13,7 @@
 - (NSString *)__bundleIdentifier
 {
     if (self == [NSBundle mainBundle]) {
-        return @"org.Buenas.Buenas-Qt";
+        return @"org.Buenos.Buenos-Qt";
     } else {
         return [self __bundleIdentifier];
     }

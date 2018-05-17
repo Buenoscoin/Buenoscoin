@@ -27,10 +27,10 @@
 #define COPYRIGHT_HOLDERS "The %s developers"
 
 /* Copyright holder(s) */
-#define COPYRIGHT_HOLDERS_FINAL "The Buenas developers"
+#define COPYRIGHT_HOLDERS_FINAL "The Buenos developers"
 
 /* Replacement for %s in copyright holders string */
-#define COPYRIGHT_HOLDERS_SUBSTITUTION "Buenas"
+#define COPYRIGHT_HOLDERS_SUBSTITUTION "Buenos"
 
 /* Copyright year */
 #define COPYRIGHT_YEAR 2017
@@ -316,16 +316,16 @@
 #define PACKAGE_BUGREPORT "https://github.com/bitcoin/bitcoin/issues"
 
 /* Define to the full name of this package. */
-#define PACKAGE_NAME "Buenas"
+#define PACKAGE_NAME "Buenos"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "Buenas 0.1.1"
+#define PACKAGE_STRING "Buenos 0.1.1"
 
 /* Define to the one symbol short name of this package. */
-#define PACKAGE_TARNAME "Buenas"
+#define PACKAGE_TARNAME "Buenos"
 
 /* Define to the home page for this package. */
-#define PACKAGE_URL "https://Buenas.org/"
+#define PACKAGE_URL "https://Buenos.org/"
 
 /* Define to the version of this package. */
 #define PACKAGE_VERSION "0.1.1"
