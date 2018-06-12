@@ -125,7 +125,7 @@ public:
         
         genesis = CreateGenesisBlock(GENESIS_TIME, 2318408309, GENESIS_DIFFICULTY, 1, 100 * COIN);
     	
-        MineGenesisBlock(genesis);
+        //MineGenesisBlock(genesis);
     	
     	consensus.hashGenesisBlock = genesis.GetHash();
         assert(consensus.hashGenesisBlock == uint256S("0x0000005c591f0b2db071f7b41092aa5e5f9136b362a383edf77f24e3c57e9acb"));
@@ -243,8 +243,6 @@ public:
 
         chainTxData = ChainTxData{
         };
-
-        printf("Test net: genesis is verified. \n");
     }
 };
 static CTestNetParams testNetParams;
@@ -291,9 +289,6 @@ public:
         nDefaultPort = 42718;
         nPruneAfterHeight = 1000;
 
-        printf("REGTEST NET ========================================================= \n");
-
-
 	genesis = CreateGenesisBlock(GENESIS_TIME, 917164697, GENESIS_DIFFICULTY, 1, 50 * COIN);
 	
         //MineGenesisBlock(genesis);
@@ -326,10 +321,6 @@ public:
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,239);
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0x35)(0x87)(0xCF).convert_to_container<std::vector<unsigned char> >();
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x04)(0x35)(0x83)(0x94).convert_to_container<std::vector<unsigned char> >();
-
-        printf("Reg test net: genesis is verified. \n");
-        printf("Genesis Block Successfully Mined \n Genesis Hash: 0x0000381de01e7ca10934a6e5d98b6886b4a44bfc488fbe9b75dafb932c462282 \n Genesis Nonce: 2317650258");
-
     }
 
     void UpdateBIP9Parameters(Consensus::DeploymentPos d, int64_t nStartTime, int64_t nTimeout)
