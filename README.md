@@ -17,8 +17,7 @@ information or see https://opensource.org/licenses/MIT.
 Credits
 -------
 
-Buenos was forked from Bitcoin Core, more specifically from Manila
+Buenos was forked from Bitcoin Core
 
 * [bitcoin](https://github.com/bitcoin/bitcoin)
 * [CryptoCoderz](https://github.com/CryptoCoderz/Espers.git) HMQ1725
-* [Manila](https://github.com/Oskii/Manila)
